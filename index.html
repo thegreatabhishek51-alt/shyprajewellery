@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHYRA JEWELLERY | Fine Diamond & 22K Gold Jewellery</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cormorant Garamond (Luxury Editorial Serif) & Plus Jakarta Sans (Clean Boutique Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        pearl: '#FDFBF7',
+                        cream: '#F6F1EA',
+                        sand: '#EDE5DA',
+                        champagne: '#B8893A',
+                        goldAccent: '#C99E48',
+                        roseTint: '#F4EAE6',
+                        espresso: '#241C18',
+                        taupe: '#6D615A',
+                        borderWarm: '#E5DDD3',
+                    },
+                    animation: {
+                        'float-slow': 'floatSlow 6s ease-in-out infinite',
+                        'shimmer-light': 'shimmerLight 4s linear infinite',
+                        'spin-slow': 'spin 28s linear infinite',
+                    },
+                    keyframes: {
+                        floatSlow: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shimmerLight: {
+                            '0%': { backgroundPosition: '-200% center' },
+                            '100%': { backgroundPosition: '200% center' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Light Luxury Styles & Smooth Motion -->
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #241C18;
+            overflow-x: hidden;
+        }
+
+        /* Champagne Gold Shimmer Text */
+        .text-champagne-shimmer {
+            background: linear-gradient(90deg, #9C6F25 0%, #D9B166 30%, #B8893A 50%, #D9B166 75%, #9C6F25 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shimmerLight 5s linear infinite;
+        }
+
+        /* Soft Luxury Card Elevation */
+        .luxury-card {
+            background: #FFFFFF;
+            border: 1px solid #EAE2D7;
+            transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .luxury-card:hover {
+            border-color: #C99E48;
+            box-shadow: 0 20px 45px -15px rgba(36, 28, 24, 0.12);
+            transform: translateY(-6px);
+        }
+
+        /* Reveal on Scroll Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: all 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle Glint Sparkles for Light Mode */
+        .glint {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, #C99E48 0%, rgba(201,158,72,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: glintPulse 4s infinite ease-in-out;
+        }
+        @keyframes glintPulse {
+            0%, 100% { opacity: 0.15; transform: scale(0.7); }
+            50% { opacity: 0.85; transform: scale(1.4); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F6F1EA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D2C3B0;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B8893A;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-champagne selection:text-white">
+
+    <!-- TOP OFFER & TRUST STRIP (Inspired by fine diamond boutiques) -->
+    <div class="bg-espresso text-pearl text-[11px] sm:text-xs tracking-[0.18em] uppercase py-2.5 px-4 text-center relative z-50">
+        <span class="text-goldAccent mr-2">✦</span> Flat 20% Off on Diamond Value • 100% BIS Hallmarked & IGI Certified • Free Insured Shipping <span class="text-goldAccent ml-2">✦</span>
+    </div>
+
+    <!-- MAIN STICKY NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-borderWarm shadow-[0_4px_20px_rgba(36,28,24,0.03)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 sm:h-24 gap-4">
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" aria-label="Open Menu" class="lg:hidden p-2.5 rounded-full text-espresso hover:bg-cream transition">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+
+                <!-- Brand Identity -->
+                <a href="#" class="flex flex-col items-center lg:items-start group shrink-0">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-champagne text-xs transition-transform duration-700 group-hover:rotate-180">✦</span>
+                        <span class="font-serif text-2xl sm:text-3xl md:text-4xl tracking-[0.25em] font-semibold text-espresso">SHYRA</span>
+                        <span class="text-champagne text-xs transition-transform duration-700 group-hover:-rotate-180">✦</span>
+                    </div>
+                    <span class="text-[9px] sm:text-[10px] tracking-[0.38em] uppercase text-champagne font-medium mt-0.5">Fine Diamonds & Gold</span>
+                </a>
+
+                <!-- Center Navigation Links (Desktop) -->
+                <nav class="hidden lg:flex items-center space-x-7 text-xs tracking-[0.18em] uppercase font-medium text-espresso/85">
+                    <a href="#catalog" onclick="filterProducts('necklaces')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Diamond Necklaces</a>
+                    <a href="#catalog" onclick="filterProducts('rings')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Solitaire Rings</a>
+                    <a href="#catalog" onclick="filterProducts('earrings')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Earrings</a>
+                    <a href="#catalog" onclick="filterProducts('bracelets')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Bangles & Cuffs</a>
+                    <a href="#bridal" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne text-champagne">Bridal Sets</a>
+                </nav>
+
+                <!-- Right Search, Wishlist & Bag -->
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <!-- Quick Search Pill (Desktop) -->
+                    <div class="hidden xl:flex items-center bg-cream border border-borderWarm rounded-full px-3.5 py-2 w-52 focus-within:border-champagne transition">
+                        <i class="fa-solid fa-magnifying-glass text-taupe text-xs mr-2.5"></i>
+                        <input id="search-input" type="text" placeholder="Search diamond sets..." class="bg-transparent text-xs text-espresso placeholder-taupe/70 focus:outline-none w-full">
+                    </div>
+
+                    <!-- Store Locator / Consultation -->
+                    <a href="#appointment" title="Book Store Visit" class="hidden sm:flex items-center space-x-1.5 px-3.5 py-2 rounded-full border border-borderWarm hover:border-champagne text-xs text-espresso transition">
+                        <i class="fa-solid fa-location-dot text-champagne text-xs"></i>
+                        <span class="hidden md:inline font-medium">Boutiques</span>
+                    </a>
+
+                    <!-- Wishlist Button -->
+                    <button onclick="showToast('Your saved pieces are kept in your Shyra Wishlist.')" aria-label="Wishlist" class="p-2.5 rounded-full text-espresso hover:bg-cream hover:text-champagne transition relative">
+                        <i class="fa-regular fa-heart text-lg"></i>
+                        <span id="wishlist-badge" class="hidden absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-champagne"></span>
+                    </button>
+
+                    <!-- Shopping Bag Button -->
+                    <button id="open-cart-btn" aria-label="Shopping Bag" class="p-2.5 rounded-full bg-cream hover:bg-sand text-espresso transition relative flex items-center space-x-2 px-3.5">
+                        <i class="fa-solid fa-bag-shopping text-base text-champagne"></i>
+                        <span id="cart-count" class="text-xs font-bold text-espresso">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Slide-Down Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-pearl border-b border-borderWarm px-6 py-5 space-y-3">
+            <div class="flex items-center bg-white border border-borderWarm rounded-full px-4 py-2.5 mb-3">
+                <i class="fa-solid fa-magnifying-glass text-taupe text-xs mr-2.5"></i>
+                <input id="mobile-search-input" type="text" placeholder="Search necklaces, rings..." class="bg-transparent text-xs text-espresso focus:outline-none w-full">
+            </div>
+            <a href="#catalog" onclick="filterProducts('necklaces')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Diamond Necklaces</a>
+            <a href="#catalog" onclick="filterProducts('rings')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Solitaire Rings</a>
+            <a href="#catalog" onclick="filterProducts('earrings')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Earrings</a>
+            <a href="#catalog" onclick="filterProducts('bracelets')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Bangles & Cuffs</a>
+            <a href="#appointment" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-champagne font-semibold">Book Store Appointment</a>
+        </div>
+    </header>
+
+    <!-- HERO BANNER: AIRY EDITORIAL SHOWCASE -->
+    <section class="relative bg-gradient-to-br from-pearl via-cream to-roseTint/60 border-b border-borderWarm overflow-hidden py-12 sm:py-20">
+        <!-- Ambient Golden Glints -->
+        <div id="glint-container" class="absolute inset-0 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Left Editorial Typography -->
+                <div class="lg:col-span-6 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-white border border-borderWarm shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-champagne"></span>
+                        <span class="text-[11px] tracking-[0.24em] uppercase text-champagne font-semibold">The Luminous Diamond Edit</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-[64px] font-medium leading-[1.08] text-espresso">
+                        Timeless Diamond <br>
+                        <span class="italic text-champagne-shimmer font-semibold">Necklace Sets</span> & <br>
+                        Everyday Brilliance.
+                    </h1>
+
+                    <p class="text-taupe text-sm sm:text-base md:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Discover handcrafted 18K & 22K gold diamond necklaces, bridal chokers, and certified solitaires designed to illuminate every milestone with effortless grace.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#catalog" class="w-full sm:w-auto px-8 py-4 rounded-full bg-espresso text-pearl hover:bg-champagne font-semibold text-xs tracking-[0.22em] uppercase transition duration-300 shadow-lg shadow-espresso/15 text-center">
+                            Shop Diamond Sets
+                        </a>
+                        <a href="#appointment" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-espresso/20 text-espresso hover:border-champagne hover:text-champagne font-semibold text-xs tracking-[0.22em] uppercase transition duration-300 text-center">
+                            Try at Home / Boutique
+                        </a>
+                    </div>
+
+                    <!-- Hallmark & Certification Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-borderWarm max-w-lg mx-auto lg:mx-0">
+                        <div class="flex items-center space-x-2.5">
+                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0">
+                                <i class="fa-solid fa-certificate text-sm"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-xs font-semibold text-espresso">IGI / GIA</p>
+                                <p class="text-[10px] text-taupe">100% Certified</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2.5">
+                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0">
+                                <i class="fa-solid fa-rotate text-sm"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-xs font-semibold text-espresso">Lifetime</p>
+                                <p class="text-[10px] text-taupe">100% Exchange</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2.5">
+                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0">
+                                <i class="fa-solid fa-shield-halved text-sm"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-xs font-semibold text-espresso">BIS HUID</p>
+                                <p class="text-[10px] text-taupe">Hallmarked Gold</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Luxury Visual Collage -->
+                <div class="lg:col-span-6 relative flex justify-center">
+                    <div class="relative w-full max-w-lg animate-float-slow">
+                        <!-- Main Editorial Frame -->
+                        <div class="rounded-[2rem] overflow-hidden bg-white p-3 shadow-[0_25px_60px_-15px_rgba(36,28,24,0.14)] border border-borderWarm">
+                            <div class="relative rounded-[1.5rem] overflow-hidden aspect-[4/4.3]">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85" 
+                                    onerror="this.src='https://placehold.co/800x860/F6F1EA/B8893A?text=SHYRA+DIAMOND+NECKLACE'"
+                                    alt="Shyra Diamond Necklace Set" 
+                                    class="w-full h-full object-cover hover:scale-105 transition duration-1000"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent"></div>
+                                
+                                <!-- Floating Product Spotlight Card -->
+                                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-borderWarm shadow-lg flex items-center justify-between">
+                                    <div>
+                                        <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">Bestselling Set</span>
+                                        <h3 class="font-serif text-xl text-espresso font-semibold">Celeste Diamond Collar Set</h3>
+                                        <p class="text-xs text-taupe">18K Rose Gold • 4.85 Ct EF-VVS Diamonds</p>
+                                    </div>
+                                    <button onclick="openProductModal(1)" class="px-4 py-2.5 rounded-full bg-espresso text-pearl hover:bg-champagne text-xs font-semibold uppercase tracking-wider transition shrink-0">
+                                        View Set
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Decorative Floating Price Tag Pill -->
+                        <div class="hidden sm:flex items-center space-x-3 bg-white px-5 py-3 rounded-2xl shadow-xl border border-borderWarm absolute -top-5 -right-5">
+                            <div class="w-10 h-10 rounded-full bg-roseTint flex items-center justify-center text-champagne">
+                                <i class="fa-regular fa-gem"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-wider text-taupe">Starting From</p>
+                                <p class="font-serif text-xl font-bold text-espresso">₹68,500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOP BY CATEGORY CIRCLES (Classic Fine Jewellery Navigation Strip) -->
+    <section class="py-12 bg-white border-b border-borderWarm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="font-serif text-2xl sm:text-3xl text-espresso font-medium">Shop By Category</h2>
+                    <p class="text-xs sm:text-sm text-taupe mt-0.5">Curated silhouettes for weddings, festivities, and daily luxury</p>
+                </div>
+                <a href="#catalog" onclick="filterProducts('all')" class="text-xs uppercase tracking-[0.2em] text-champagne font-semibold hover:underline">View All →</a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:gap-8">
+                <!-- Cat 1 -->
+                <button onclick="filterProducts('necklaces'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=Necklaces'" alt="Diamond Necklaces" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">Diamond Necklaces</h3>
+                        <p class="text-xs text-taupe">Chokers, Rivierè & Bridal Sets</p>
+                    </div>
+                </button>
+
+                <!-- Cat 2 -->
+                <button onclick="filterProducts('rings'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=Rings'" alt="Solitaire Rings" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">Solitaire Rings</h3>
+                        <p class="text-xs text-taupe">Engagement & Eternity Bands</p>
+                    </div>
+                </button>
+
+                <!-- Cat 3 -->
+                <button onclick="filterProducts('earrings'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=Earrings'" alt="Diamond Earrings" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">Diamond Earrings</h3>
+                        <p class="text-xs text-taupe">Drops, Jhumkas & Solitaire Studs</p>
+                    </div>
+                </button>
+
+                <!-- Cat 4 -->
+                <button onclick="filterProducts('bracelets'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=Bracelets'" alt="Bangles & Bracelets" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">Bangles & Cuffs</h3>
+                        <p class="text-xs text-taupe">Tennis Bracelets & Gold Kadas</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN E-COMMERCE CATALOG WITH FILTER BAR & SORTING -->
+    <section id="catalog" class="py-16 sm:py-24 bg-pearl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Catalog Header & Controls -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.26em] text-champagne font-semibold">Certified Fine Jewellery</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-espresso font-medium mt-1">Diamond Sets & Masterpieces</h2>
+                </div>
+
+                <!-- Sort & Price Range Dropdowns -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <select id="price-filter" onchange="applyAllFilters()" class="px-4 py-2.5 rounded-full bg-white border border-borderWarm text-xs text-espresso font-medium focus:outline-none focus:border-champagne">
+                        <option value="all">All Price Ranges</option>
+                        <option value="under100k">Under ₹1,00,000</option>
+                        <option value="100kto250k">₹1,00,000 – ₹2,50,000</option>
+                        <option value="above250k">Above ₹2,50,000</option>
+                    </select>
+
+                    <select id="sort-filter" onchange="applyAllFilters()" class="px-4 py-2.5 rounded-full bg-white border border-borderWarm text-xs text-espresso font-medium focus:outline-none focus:border-champagne">
+                        <option value="featured">Sort: Featured</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap items-center gap-2.5 mb-10 pb-4 border-b border-borderWarm">
+                <button onclick="filterProducts('all')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-espresso text-pearl font-semibold" data-filter="all">
+                    All Designs (8)
+                </button>
+                <button onclick="filterProducts('necklaces')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="necklaces">
+                    Diamond Necklaces
+                </button>
+                <button onclick="filterProducts('rings')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="rings">
+                    Solitaire Rings
+                </button>
+                <button onclick="filterProducts('earrings')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="earrings">
+                    Earrings
+                </button>
+                <button onclick="filterProducts('bracelets')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="bracelets">
+                    Bangles & Cuffs
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
+                <!-- Rendered via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- BRIDAL & CUSTOMIZATION SHOWCASE (Warm Rose & Cream Editorial Banner) -->
+    <section id="bridal" class="py-16 sm:py-24 bg-gradient-to-r from-cream via-roseTint/70 to-cream border-y border-borderWarm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                
+                <!-- Left Image -->
+                <div class="lg:col-span-6 reveal">
+                    <div class="rounded-[2rem] overflow-hidden bg-white p-3 border border-borderWarm shadow-xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=950&q=85" 
+                            onerror="this.src='https://placehold.co/800x650/F6F1EA/B8893A?text=SHYRA+BRIDAL+COUTURE'"
+                            alt="Shyra Bridal Diamond Necklace Suite" 
+                            class="w-full h-[380px] sm:h-[460px] object-cover rounded-[1.5rem]"
+                        >
+                    </div>
+                </div>
+
+                <!-- Right Interactive Alloy & Diamond Customizer -->
+                <div class="lg:col-span-6 space-y-6 reveal">
+                    <span class="text-xs uppercase tracking-[0.26em] text-champagne font-semibold">Bespoke Bridal Atelier</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-espresso font-medium leading-tight">
+                        Customize Your Necklace Set in <span class="italic text-champagne">Three Precious Gold Tones</span>
+                    </h2>
+                    <p class="text-taupe text-sm sm:text-base leading-relaxed">
+                        Every Shyra diamond necklace and solitaire ring can be custom-crafted in 18K Rose Gold, 18K White Gold, or 22K Royal Yellow Gold with certified EF-VVS diamonds.
+                    </p>
+
+                    <!-- Interactive Gold Tone Selector -->
+                    <div class="p-6 rounded-2xl bg-white border border-borderWarm shadow-sm space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs uppercase tracking-widest text-taupe font-medium">Selected Gold Finish:</span>
+                            <span id="selected-metal-label" class="text-xs font-bold text-champagne uppercase tracking-wider">18K Blush Rose Gold</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <button onclick="selectMetal('18K Blush Rose Gold', 'Our signature romantic rose hue that makes EF-VVS white diamonds appear extraordinarily bright.')" class="metal-btn px-4 py-2.5 rounded-full text-xs border border-champagne bg-roseTint text-espresso font-semibold flex items-center space-x-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-rose-400 to-amber-200 inline-block border border-black/10"></span>
+                                <span>18K Rose Gold</span>
+                            </button>
+                            <button onclick="selectMetal('22K Royal Yellow Gold', 'Classic warm Indian heirloom lustre crafted for traditional bridal chokers and jadau sets.')" class="metal-btn px-4 py-2.5 rounded-full text-xs border border-borderWarm bg-pearl text-espresso hover:border-champagne flex items-center space-x-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 inline-block border border-black/10"></span>
+                                <span>22K Yellow Gold</span>
+                            </button>
+                            <button onclick="selectMetal('18K Rhodium White Gold', 'Sleek contemporary brilliance engineered to mirror pure platinum radiance.')" class="metal-btn px-4 py-2.5 rounded-full text-xs border border-borderWarm bg-pearl text-espresso hover:border-champagne flex items-center space-x-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-slate-300 to-white inline-block border border-black/10"></span>
+                                <span>18K White Gold</span>
+                            </button>
+                        </div>
+                        <p id="selected-metal-desc" class="text-xs text-taupe italic">
+                            Our signature romantic rose hue that makes EF-VVS white diamonds appear extraordinarily bright.
+                        </p>
+                    </div>
+
+                    <div class="pt-1 flex flex-wrap gap-4">
+                        <a href="#appointment" class="px-7 py-3.5 rounded-full bg-espresso text-pearl hover:bg-champagne text-xs font-semibold uppercase tracking-[0.2em] transition">
+                            Book Video Consultation
+                        </a>
+                        <a href="#catalog" class="px-7 py-3.5 rounded-full bg-white border border-borderWarm text-espresso hover:border-champagne text-xs font-semibold uppercase tracking-[0.2em] transition">
+                            Explore Bridal Sets
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SHYRA PROMISE (Clean Light Pillars) -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <span class="text-xs uppercase tracking-[0.28em] text-champagne font-semibold">Why Choose Shyra</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-medium mt-2">The Shyra Assurance of Purity</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-pearl border border-borderWarm text-center space-y-3 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shadow-sm">
+                        <i class="fa-regular fa-gem text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-espresso">100% Certified Diamonds</h3>
+                    <p class="text-xs text-taupe leading-relaxed">Every diamond piece is accompanied by an authentic IGI or GIA grading certificate.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-borderWarm text-center space-y-3 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shadow-sm">
+                        <i class="fa-solid fa-arrows-rotate text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-espresso">Lifetime Exchange</h3>
+                    <p class="text-xs text-taupe leading-relaxed">Upgrade your diamond jewellery anytime with 100% value exchange across all boutiques.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-borderWarm text-center space-y-3 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shadow-sm">
+                        <i class="fa-solid fa-hand-holding-heart text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-espresso">15-Day Easy Returns</h3>
+                    <p class="text-xs text-taupe leading-relaxed">Shop with complete confidence with our no-questions-asked 15-day return & refund policy.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-pearl border border-borderWarm text-center space-y-3 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shadow-sm">
+                        <i class="fa-solid fa-truck-fast text-lg"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-espresso">Insured Express Transit</h3>
+                    <p class="text-xs text-taupe leading-relaxed">Tamper-proof luxury packaging delivered safely and fully insured to your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORE APPOINTMENT / TRY AT HOME BOOKING -->
+    <section id="appointment" class="py-16 sm:py-24 bg-cream border-t border-borderWarm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="rounded-[2rem] bg-white border border-borderWarm p-8 sm:p-12 shadow-[0_20px_50px_-15px_rgba(36,28,24,0.08)]">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-xs uppercase tracking-[0.26em] text-champagne font-semibold">Personalized Experience</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-medium mt-2">Book a Boutique Visit or Video Call</h2>
+                    <p class="text-taupe text-sm mt-2">
+                        Preview diamond necklace sets live with our jewellery stylists from the comfort of your home or visit a Shyra flagship salon.
+                    </p>
+                </div>
+
+                <form id="appointment-form" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-taupe font-semibold mb-2">Your Name</label>
+                        <input type="text" required placeholder="Ananya Sharma" class="w-full px-4 py-3 rounded-xl bg-pearl border border-borderWarm text-espresso text-sm focus:outline-none focus:border-champagne transition">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-taupe font-semibold mb-2">Phone / WhatsApp Number</label>
+                        <input type="tel" required placeholder="+91 98200 00000" class="w-full px-4 py-3 rounded-xl bg-pearl border border-borderWarm text-espresso text-sm focus:outline-none focus:border-champagne transition">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-taupe font-semibold mb-2">Experience Type</label>
+                        <select class="w-full px-4 py-3 rounded-xl bg-pearl border border-borderWarm text-espresso text-sm focus:outline-none focus:border-champagne transition">
+                            <option>Live Video Call Consultation</option>
+                            <option>Mumbai Flagship Boutique — Bandra West</option>
+                            <option>New Delhi Salon — South Extension</option>
+                            <option>Nagpur Luxury Lounge — Civil Lines</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-taupe font-semibold mb-2">Preferred Date</label>
+                        <input type="date" required class="w-full px-4 py-3 rounded-xl bg-pearl border border-borderWarm text-espresso text-sm focus:outline-none focus:border-champagne transition">
+                    </div>
+                    <div class="sm:col-span-2 pt-2">
+                        <button type="submit" class="w-full py-4 rounded-full bg-espresso text-pearl hover:bg-champagne font-semibold text-xs tracking-[0.22em] uppercase transition shadow-md">
+                            Schedule My Private Viewing
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLEAN LUXURY FOOTER -->
+    <footer class="bg-white border-t border-borderWarm pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-borderWarm">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-champagne text-sm">✦</span>
+                        <span class="font-serif text-2xl tracking-[0.25em] font-semibold text-espresso">SHYRA JEWELLERY</span>
+                    </div>
+                    <p class="text-taupe text-sm max-w-md leading-relaxed">
+                        Crafting luminous diamond necklace sets, certified solitaires, and 22K BIS-hallmarked gold heirlooms designed for modern elegance.
+                    </p>
+                    <div class="flex space-x-3 pt-1">
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-pearl border border-borderWarm flex items-center justify-center text-espresso hover:border-champagne hover:text-champagne transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-pearl border border-borderWarm flex items-center justify-center text-espresso hover:border-champagne hover:text-champagne transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Pinterest" class="w-9 h-9 rounded-full bg-pearl border border-borderWarm flex items-center justify-center text-espresso hover:border-champagne hover:text-champagne transition"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.2em] text-espresso font-bold mb-4">Jewellery</h4>
+                    <ul class="space-y-2.5 text-sm text-taupe">
+                        <li><a href="#catalog" onclick="filterProducts('necklaces')" class="hover:text-champagne transition">Diamond Necklace Sets</a></li>
+                        <li><a href="#catalog" onclick="filterProducts('rings')" class="hover:text-champagne transition">Solitaire & Engagement Rings</a></li>
+                        <li><a href="#catalog" onclick="filterProducts('earrings')" class="hover:text-champagne transition">Diamond Earrings & Drops</a></li>
+                        <li><a href="#catalog" onclick="filterProducts('bracelets')" class="hover:text-champagne transition">Tennis Bracelets & Bangles</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-[0.2em] text-espresso font-bold mb-4">Customer Care</h4>
+                    <ul class="space-y-2.5 text-sm text-taupe">
+                        <li><a href="#appointment" class="hover:text-champagne transition">Book a Store Visit</a></li>
+                        <li><a href="#bridal" class="hover:text-champagne transition">Diamond Education & IGI Guide</a></li>
+                        <li><a href="#appointment" class="hover:text-champagne transition">100% Lifetime Exchange Policy</a></li>
+                        <li class="text-espresso font-medium">care@shyrajewellery.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-taupe gap-4">
+                <p>© 2026 SHYRA JEWELLERY. All Rights Reserved.</p>
+                <p>100% BIS Hallmarked Gold • IGI / GIA Certified Diamonds • Insured Shipping</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT QUICK-VIEW MODAL (Light Boutique Theme) -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-espresso/60 backdrop-blur-sm">
+        <div class="bg-white border border-borderWarm rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative">
+            <button onclick="closeProductModal()" aria-label="Close Modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-pearl text-espresso hover:bg-espresso hover:text-white flex items-center justify-center border border-borderWarm transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-content" class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE-OUT SHOPPING BAG DRAWER (Light Boutique Theme) -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+        <div id="cart-backdrop" class="absolute inset-0 bg-espresso/50 backdrop-blur-sm transition-opacity"></div>
+        
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white border-l border-borderWarm flex flex-col justify-between p-6 shadow-2xl">
+            <!-- Header -->
+            <div class="flex items-center justify-between pb-5 border-b border-borderWarm">
+                <div>
+                    <h3 class="font-serif text-2xl font-semibold text-espresso">Your Shopping Bag</h3>
+                    <p class="text-xs text-taupe">Complimentary insured delivery & gift box</p>
+                </div>
+                <button id="close-cart-btn" class="w-9 h-9 rounded-full bg-pearl border border-borderWarm text-espresso hover:bg-espresso hover:text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Cart Items -->
+            <div id="cart-items-container" class="flex-1 overflow-y-auto py-6 space-y-4">
+                <!-- Populated dynamically -->
+            </div>
+
+            <!-- Cart Summary & Checkout -->
+            <div class="pt-5 border-t border-borderWarm space-y-4 bg-pearl -mx-6 -mb-6 p-6">
+                <div class="flex items-center justify-between text-xs text-taupe">
+                    <span>Insured Shipping & Certification</span>
+                    <span class="text-emerald-700 font-semibold uppercase">Complimentary</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-espresso uppercase tracking-wider text-xs font-bold">Total Amount</span>
+                    <span id="cart-total" class="font-serif text-2xl font-bold text-espresso">₹0</span>
+                </div>
+                <button onclick="checkoutOrder()" class="w-full py-4 rounded-full bg-espresso text-pearl hover:bg-champagne font-semibold text-xs tracking-[0.22em] uppercase transition shadow-lg">
+                    Proceed to Secure Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM TOAST NOTIFICATION -->
+    <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-500 pointer-events-none">
+        <div class="bg-espresso text-pearl px-5 py-3.5 rounded-2xl shadow-2xl flex items-center space-x-3 max-w-sm">
+            <span class="text-goldAccent text-base">✦</span>
+            <p id="toast-message" class="text-xs sm:text-sm"></p>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE APPLICATION SCRIPT -->
+    <script>
+        // Fine Diamond & Gold Jewellery Catalog (ORRA-inspired diamond necklace & solitaire focus)
+        const products = [
+            {
+                id: 1,
+                name: "Celeste Diamond Necklace Set",
+                category: "necklaces",
+                badge: "Bestseller • 20% Off Diamond",
+                price: 184500,
+                originalPrice: 215000,
+                metal: "18K Rose Gold • 14.2g",
+                stones: "4.85 Ct EF-VVS Certified Diamonds",
+                image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85",
+                description: "An iconic graduated diamond necklace paired with matching solitaire drop earrings, crafted in 18K blush rose gold for luminous bridal and evening wear."
+            },
+            {
+                id: 2,
+                name: "Noor-e-Shyra Emerald & Diamond Set",
+                category: "necklaces",
+                badge: "Bridal Edit",
+                price: 295000,
+                originalPrice: 340000,
+                metal: "18K Yellow Gold • 22.8g",
+                stones: "5.40 Ct Zambian Emeralds & VVS Diamonds",
+                image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=85",
+                description: "Regal octagonal emeralds framed by micro-pavé brilliant diamonds in a flexible, articulated choker silhouette with matching chandelier earrings."
+            },
+            {
+                id: 3,
+                name: "Aurelia Crown Solitaire Ring",
+                category: "rings",
+                badge: "GIA Certified",
+                price: 128000,
+                originalPrice: 148000,
+                metal: "18K White Gold • 4.1g",
+                stones: "1.10 Ct Oval Solitaire (E / VVS1)",
+                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=85",
+                description: "A timeless oval-cut solitaire elevated in a delicate diamond-studded cathedral gallery for maximum light dispersion."
+            },
+            {
+                id: 4,
+                name: "Zoya Diamond Chandbali Drops",
+                category: "earrings",
+                badge: "Festive Favourite",
+                price: 86500,
+                originalPrice: 99000,
+                metal: "18K Yellow Gold • 8.6g",
+                stones: "1.95 Ct Round & Marquise Diamonds",
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=85",
+                description: "Crescent-inspired diamond drop earrings featuring articulated floral clusters that shimmer with every movement."
+            },
+            {
+                id: 5,
+                name: "Seraphina Diamond Tennis Bracelet",
+                category: "bracelets",
+                badge: "Everyday Luxury",
+                price: 142000,
+                originalPrice: 165000,
+                metal: "18K Rose Gold • 11.4g",
+                stones: "3.20 Ct EF-VVS Round Brilliants",
+                image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=85",
+                description: "A fluid line of perfectly matched round brilliant diamonds set in four-prong baskets with a concealed double-safety clasp."
+            },
+            {
+                id: 6,
+                name: "Aria Dainty Diamond Pendant Set",
+                category: "necklaces",
+                badge: "Under ₹1L",
+                price: 68500,
+                originalPrice: 79000,
+                metal: "18K Rose Gold • 5.9g",
+                stones: "1.25 Ct Pear & Round Diamonds",
+                image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=85",
+                description: "Effortlessly chic teardrop diamond necklace set complete with matching studs—ideal for intimate celebrations and gifting."
+            },
+            {
+                id: 7,
+                name: "Miraya Seven-Stone Eternity Ring",
+                category: "rings",
+                badge: "Anniversary Pick",
+                price: 74900,
+                originalPrice: 88000,
+                metal: "18K Yellow Gold • 3.8g",
+                stones: "1.40 Ct EF-VVS Diamonds",
+                image: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=85",
+                description: "Seven matched brilliant-cut diamonds set seamlessly across the band to celebrate life's most cherished milestones."
+            },
+            {
+                id: 8,
+                name: "Étoile Diamond Halo Studs",
+                category: "earrings",
+                badge: "Classic Essential",
+                price: 62000,
+                originalPrice: 72000,
+                metal: "18K White Gold • 3.4g",
+                stones: "1.05 Ct Cushion Halo Diamonds",
+                image: "https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=800&q=85",
+                description: "Luminous cushion-shaped diamond cluster studs secured with screw-back comfort posts for all-day radiance."
+            }
+        ];
+
+        // State Variables
+        let currentCategory = 'all';
+        let cart = [];
+        let wishlist = new Set();
+
+        // Format Currency in INR
+        function formatINR(amount) {
+            return '₹' + amount.toLocaleString('en-IN');
+        }
+
+        // Filter & Sort Logic
+        function filterProducts(category) {
+            currentCategory = category;
+
+            // Update Active Tab Styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.classList.add('bg-espresso', 'text-pearl', 'font-semibold');
+                    btn.classList.remove('bg-white', 'text-espresso', 'border', 'border-borderWarm');
+                } else {
+                    btn.classList.remove('bg-espresso', 'text-pearl', 'font-semibold');
+                    btn.classList.add('bg-white', 'text-espresso', 'border', 'border-borderWarm');
+                }
+            });
+
+            applyAllFilters();
+        }
+
+        function applyAllFilters() {
+            const priceFilter = document.getElementById('price-filter').value;
+            const sortFilter = document.getElementById('sort-filter').value;
+            const searchTerm = (document.getElementById('search-input')?.value || document.getElementById('mobile-search-input')?.value || '').toLowerCase().trim();
+
+            let filtered = products.filter(p => {
+                const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+                const matchesSearch = !searchTerm || p.name.toLowerCase().includes(searchTerm) || p.stones.toLowerCase().includes(searchTerm) || p.metal.toLowerCase().includes(searchTerm);
+                
+                let matchesPrice = true;
+                if (priceFilter === 'under100k') matchesPrice = p.price < 100000;
+                else if (priceFilter === '100kto250k') matchesPrice = p.price >= 100000 && p.price <= 250000;
+                else if (priceFilter === 'above250k') matchesPrice = p.price > 250000;
+
+                return matchesCategory && matchesSearch && matchesPrice;
+            });
+
+            if (sortFilter === 'low-high') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortFilter === 'high-low') {
+                filtered.sort((a, b) => b.price - a.price);
+            }
+
+            renderProductCards(filtered);
+        }
+
+        function renderProductCards(list) {
+            const grid = document.getElementById('product-grid');
+
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-16 text-center bg-white rounded-3xl border border-borderWarm space-y-3">
+                        <i class="fa-regular fa-gem text-3xl text-champagne"></i>
+                        <h3 class="font-serif text-2xl text-espresso">No matching jewellery found</h3>
+                        <p class="text-xs text-taupe">Try resetting your price or category filters to view our full diamond collection.</p>
+                        <button onclick="resetFilters()" class="mt-2 px-6 py-2.5 rounded-full bg-espresso text-pearl text-xs uppercase tracking-wider font-semibold">Reset Filters</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = list.map(product => `
+                <div class="luxury-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <!-- Product Image Container -->
+                        <div class="relative aspect-[4/4.4] bg-cream overflow-hidden">
+                            <img 
+                                src="${product.image}" 
+                                onerror="this.src='https://placehold.co/600x660/F6F1EA/B8893A?text=SHYRA+DIAMOND'"
+                                alt="${product.name}" 
+                                class="w-full h-full object-cover group-hover:scale-108 transition duration-700"
+                            >
+                            
+                            <!-- Offer / Certification Pill -->
+                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-borderWarm text-[10px] font-semibold uppercase tracking-wider text-champagne shadow-sm">
+                                ${product.badge}
+                            </span>
+
+                            <!-- Wishlist Heart -->
+                            <button onclick="toggleWishlist(${product.id})" aria-label="Save to Wishlist" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm border border-borderWarm flex items-center justify-center text-espresso hover:text-champagne transition shadow-sm">
+                                <i class="${wishlist.has(product.id) ? 'fa-solid text-rose-500' : 'fa-regular'} fa-heart text-sm"></i>
+                            </button>
+
+                            <!-- Hover Quick View CTA -->
+                            <button onclick="openProductModal(${product.id})" class="absolute bottom-3 left-3 right-3 py-2.5 rounded-full bg-white/95 backdrop-blur-md border border-borderWarm text-espresso text-[11px] font-semibold uppercase tracking-[0.18em] opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 hover:bg-espresso hover:text-white shadow-md">
+                                Quick View & Breakup
+                            </button>
+                        </div>
+
+                        <!-- Info -->
+                        <div class="p-5 pb-3">
+                            <p class="text-[11px] text-taupe font-medium">${product.metal}</p>
+                            <h3 class="font-serif text-xl font-semibold text-espresso mt-1 group-hover:text-champagne transition leading-snug">${product.name}</h3>
+                            <p class="text-xs text-taupe/85 mt-1 line-clamp-1">${product.stones}</p>
+                        </div>
+                    </div>
+
+                    <!-- Price & Add to Bag -->
+                    <div class="px-5 pb-5 pt-3 border-t border-borderWarm/70 flex items-center justify-between">
+                        <div>
+                            <span class="font-serif text-xl font-bold text-espresso">${formatINR(product.price)}</span>
+                            <span class="text-xs text-taupe line-through ml-1.5">${formatINR(product.originalPrice)}</span>
+                        </div>
+                        <button onclick="addToCart(${product.id})" class="px-4 py-2 rounded-full bg-cream hover:bg-espresso text-espresso hover:text-white border border-borderWarm text-[11px] font-semibold uppercase tracking-wider transition">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function resetFilters() {
+            document.getElementById('price-filter').value = 'all';
+            document.getElementById('sort-filter').value = 'featured';
+            if (document.getElementById('search-input')) document.getElementById('search-input').value = '';
+            if (document.getElementById('mobile-search-input')) document.getElementById('mobile-search-input').value = '';
+            filterProducts('all');
+        }
+
+        // Wishlist Toggle
+        function toggleWishlist(id) {
+            const product = products.find(p => p.id === id);
+            if (wishlist.has(id)) {
+                wishlist.delete(id);
+                showToast(`Removed "${product.name}" from your wishlist.`);
+            } else {
+                wishlist.add(id);
+                showToast(`Saved "${product.name}" to your wishlist.`);
+            }
+            document.getElementById('wishlist-badge').classList.toggle('hidden', wishlist.size === 0);
+            applyAllFilters();
+        }
+
+        // Product Quick View Modal with Price Breakup
+        function openProductModal(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            const modal = document.getElementById('product-modal');
+            const content = document.getElementById('modal-content');
+
+            content.innerHTML = `
+                <div class="bg-cream aspect-square md:aspect-auto">
+                    <img src="${product.image}" onerror="this.src='https://placehold.co/600x600/F6F1EA/B8893A?text=SHYRA'" alt="${product.name}" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 sm:p-8 flex flex-col justify-between space-y-5">
+                    <div class="space-y-3">
+                        <span class="inline-block px-3 py-1 rounded-full bg-roseTint text-champagne text-[10px] font-bold uppercase tracking-widest">${product.badge}</span>
+                        <h3 class="font-serif text-3xl font-semibold text-espresso">${product.name}</h3>
+                        <div class="flex items-baseline space-x-2.5">
+                            <span class="font-serif text-2xl font-bold text-espresso">${formatINR(product.price)}</span>
+                            <span class="text-sm text-taupe line-through">${formatINR(product.originalPrice)}</span>
+                            <span class="text-xs text-emerald-700 font-semibold">(Incl. GST)</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-taupe leading-relaxed pt-1">${product.description}</p>
+                        
+                        <div class="p-4 rounded-2xl bg-pearl border border-borderWarm text-xs text-espresso space-y-1.5">
+                            <div class="flex justify-between"><span class="text-taupe">Gold Purity & Weight:</span><span class="font-semibold">${product.metal}</span></div>
+                            <div class="flex justify-between"><span class="text-taupe">Diamond Quality:</span><span class="font-semibold">${product.stones}</span></div>
+                            <div class="flex justify-between"><span class="text-taupe">Certification:</span><span class="font-semibold text-champagne">IGI Certified & BIS HUID</span></div>
+                        </div>
+                    </div>
+                    <button onclick="addToCart(${product.id}); closeProductModal();" class="w-full py-4 rounded-full bg-espresso text-pearl hover:bg-champagne font-semibold text-xs tracking-[0.22em] uppercase transition shadow-md">
+                        Add to Shopping Bag
+                    </button>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Shopping Bag Operations
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+            updateCartUI();
+            showToast(`Added "${product.name}" to your shopping bag.`);
+        }
+
+        function updateQuantity(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countBadge = document.getElementById('cart-count');
+            const container = document.getElementById('cart-items-container');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            countBadge.textContent = totalItems;
+            totalEl.textContent = formatINR(totalPrice);
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center text-center py-12 space-y-3">
+                        <div class="w-14 h-14 rounded-full bg-cream flex items-center justify-center text-champagne">
+                            <i class="fa-solid fa-bag-shopping text-xl"></i>
+                        </div>
+                        <p class="font-serif text-2xl font-medium text-espresso">Your Bag is Empty</p>
+                        <p class="text-xs text-taupe max-w-xs">Explore our certified diamond necklace sets and solitaires to add pieces here.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="flex items-center space-x-4 p-3.5 rounded-2xl bg-pearl border border-borderWarm">
+                    <img src="${item.image}" alt="${item.name}" class="w-16 h-20 object-cover rounded-xl border border-borderWarm">
+                    <div class="flex-1 min-w-0">
+                        <h4 class="font-serif text-base font-semibold text-espresso truncate">${item.name}</h4>
+                        <p class="text-[11px] text-taupe">${item.metal}</p>
+                        <p class="text-sm text-espresso font-bold mt-1">${formatINR(item.price)}</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="updateQuantity(${item.id}, -1)" class="w-7 h-7 rounded-full bg-white border border-borderWarm text-xs text-espresso hover:border-champagne">-</button>
+                        <span class="text-xs font-semibold w-4 text-center">${item.qty}</span>
+                        <button onclick="updateQuantity(${item.id}, 1)" class="w-7 h-7 rounded-full bg-white border border-borderWarm text-xs text-espresso hover:border-champagne">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function checkoutOrder() {
+            if (cart.length === 0) {
+                showToast("Please add at least one piece to your shopping bag.");
+                return;
+            }
+            cart = [];
+            updateCartUI();
+            document.getElementById('cart-drawer').classList.add('hidden');
+            showToast("Thank you! Your insured order has been placed with Shyra Concierge.");
+        }
+
+        // Interactive Gold Finish Switcher
+        function selectMetal(name, description) {
+            document.getElementById('selected-metal-label').textContent = name;
+            document.getElementById('selected-metal-desc').textContent = description;
+
+            document.querySelectorAll('.metal-btn').forEach(btn => {
+                if (btn.textContent.trim().includes(name.split(' ')[1]) || btn.textContent.trim().includes(name.split(' ')[2])) {
+                    btn.classList.add('border-champagne', 'bg-roseTint', 'font-semibold');
+                    btn.classList.remove('border-borderWarm', 'bg-pearl');
+                } else {
+                    btn.classList.remove('border-champagne', 'bg-roseTint', 'font-semibold');
+                    btn.classList.add('border-borderWarm', 'bg-pearl');
+                }
+            });
+        }
+
+        // Toast Helper
+        let toastTimer;
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3400);
+        }
+
+        // Create Subtle Champagne Glints in Hero
+        function createGlints() {
+            const container = document.getElementById('glint-container');
+            for (let i = 0; i < 20; i++) {
+                const glint = document.createElement('div');
+                glint.className = 'glint';
+                glint.style.left = Math.random() * 100 + '%';
+                glint.style.top = Math.random() * 100 + '%';
+                glint.style.animationDelay = (Math.random() * 4) + 's';
+                container.appendChild(glint);
+            }
+        }
+
+        // Scroll Reveal Observer
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // Initialize Everything on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProductCards(products);
+            updateCartUI();
+            createGlints();
+            initScrollReveal();
+
+            // Live Search Listeners
+            document.getElementById('search-input')?.addEventListener('input', applyAllFilters);
+            document.getElementById('mobile-search-input')?.addEventListener('input', applyAllFilters);
+
+            // Mobile Menu Controls
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // Cart Drawer Controls
+            const cartDrawer = document.getElementById('cart-drawer');
+            document.getElementById('open-cart-btn').addEventListener('click', () => cartDrawer.classList.remove('hidden'));
+            document.getElementById('close-cart-btn').addEventListener('click', () => cartDrawer.classList.add('hidden'));
+            document.getElementById('cart-backdrop').addEventListener('click', () => cartDrawer.classList.add('hidden'));
+
+            // Appointment Form Submit
+            document.getElementById('appointment-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                e.target.reset();
+                showToast("Appointment confirmed! Our jewellery stylist will call you shortly.");
+            });
+        });
+    </script>
+</body>
+</html>
