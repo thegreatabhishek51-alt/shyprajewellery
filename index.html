@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHYRA JEWELLERY | Premium Artificial & Bridal Rental Jewellery — Nagpur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>SHYRA JEWELLERY | Luxury Artificial & Bridal Rental Jewellery — Nagpur</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Cormorant Garamond (Luxury Editorial Serif) & Plus Jakarta Sans (Clean Boutique Sans) -->
+    <!-- Google Fonts: Cinzel (Haute Couture Display), Playfair Display (Editorial Italic) & Montserrat (Refined Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,30 +22,29 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cinzel"', 'Georgia', 'serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
                     },
                     colors: {
                         pearl: '#FDFBF7',
                         cream: '#F6F1EA',
                         sand: '#EDE5DA',
-                        champagne: '#B8893A',
-                        goldAccent: '#C99E48',
-                        roseTint: '#F4EAE6',
-                        espresso: '#241C18',
-                        taupe: '#6D615A',
-                        borderWarm: '#E5DDD3',
-                        whatsapp: '#1FA855',
+                        champagne: '#B58434',
+                        goldAccent: '#CFA554',
+                        roseTint: '#F5ECE8',
+                        espresso: '#221A16',
+                        taupe: '#6B5F58',
+                        borderWarm: '#E4DCD1',
                     },
                     animation: {
                         'float-slow': 'floatSlow 6s ease-in-out infinite',
                         'shimmer-light': 'shimmerLight 4s linear infinite',
-                        'spin-slow': 'spin 28s linear infinite',
                     },
                     keyframes: {
                         floatSlow: {
                             '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
+                            '50%': { transform: 'translateY(-8px)' },
                         },
                         shimmerLight: {
                             '0%': { backgroundPosition: '-200% center' },
@@ -57,22 +56,51 @@
         }
     </script>
 
-    <!-- Custom Light Luxury Styles & Smooth Motion -->
+    <!-- Custom Light Luxury Styles & Strict Mobile Overflow Protection -->
     <style>
-        body {
-            background-color: #FDFBF7;
-            color: #241C18;
+        html, body {
+            max-width: 100%;
             overflow-x: hidden;
+            background-color: #FDFBF7;
+            color: #221A16;
+            -webkit-tap-highlight-color: transparent;
         }
 
         /* Champagne Gold Shimmer Text */
         .text-champagne-shimmer {
-            background: linear-gradient(90deg, #9C6F25 0%, #D9B166 30%, #B8893A 50%, #D9B166 75%, #9C6F25 100%);
+            background: linear-gradient(90deg, #966820 0%, #D9B166 30%, #B58434 50%, #D9B166 75%, #966820 100%);
             background-size: 200% auto;
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
             animation: shimmerLight 5s linear infinite;
+        }
+
+        /* Luxury Champagne & Espresso WhatsApp Action Button */
+        .btn-luxe-wa {
+            background: linear-gradient(135deg, #221A16 0%, #3A2C24 100%);
+            color: #FDFBF7;
+            border: 1px solid #CFA554;
+            box-shadow: 0 10px 25px -8px rgba(34, 26, 22, 0.25);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-luxe-wa:hover {
+            background: linear-gradient(135deg, #B58434 0%, #9A6D25 100%);
+            color: #FFFFFF;
+            border-color: #B58434;
+            transform: translateY(-2px);
+        }
+
+        .btn-luxe-wa-soft {
+            background: #F6F1EA;
+            color: #221A16;
+            border: 1px solid #D5C4A9;
+            transition: all 0.35s ease;
+        }
+        .btn-luxe-wa-soft:hover {
+            background: #221A16;
+            color: #FDFBF7;
+            border-color: #221A16;
         }
 
         /* Soft Luxury Card Elevation */
@@ -82,40 +110,40 @@
             transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .luxury-card:hover {
-            border-color: #C99E48;
-            box-shadow: 0 20px 45px -15px rgba(36, 28, 24, 0.12);
-            transform: translateY(-6px);
+            border-color: #CFA554;
+            box-shadow: 0 20px 45px -15px rgba(34, 26, 22, 0.12);
+            transform: translateY(-5px);
         }
 
         /* Reveal on Scroll Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(26px);
-            transition: all 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(22px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Subtle Glint Sparkles for Light Mode */
+        /* Subtle Glint Sparkles */
         .glint {
             position: absolute;
             width: 5px;
             height: 5px;
-            background: radial-gradient(circle, #C99E48 0%, rgba(201,158,72,0) 70%);
+            background: radial-gradient(circle, #CFA554 0%, rgba(207,165,84,0) 70%);
             border-radius: 50%;
             pointer-events: none;
             animation: glintPulse 4s infinite ease-in-out;
         }
         @keyframes glintPulse {
             0%, 100% { opacity: 0.15; transform: scale(0.7); }
-            50% { opacity: 0.85; transform: scale(1.4); }
+            50% { opacity: 0.85; transform: scale(1.3); }
         }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 7px;
+            width: 6px;
         }
         ::-webkit-scrollbar-track {
             background: #F6F1EA;
@@ -125,274 +153,301 @@
             border-radius: 9999px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #B8893A;
+            background: #B58434;
         }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-champagne selection:text-white">
+<body class="font-sans antialiased selection:bg-champagne selection:text-white w-full overflow-x-hidden">
 
     <!-- TOP OFFER & RENTAL TRUST STRIP -->
-    <div class="bg-espresso text-pearl text-[11px] sm:text-xs tracking-[0.16em] uppercase py-2.5 px-4 text-center relative z-50">
-        <span class="text-goldAccent mr-2">✦</span> Luxury Artificial, AD & Bridal Jewellery • Buy or Rent for Weddings • Instant WhatsApp Booking: +91 95117 02775 <span class="text-goldAccent ml-2">✦</span>
+    <div class="w-full bg-espresso text-pearl text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] uppercase py-2.5 px-3 text-center relative z-50">
+        <span class="text-goldAccent mr-1.5">✦</span> Luxury Artificial & Bridal Rental Jewellery • Buy or Rent • Fortune Mall, Nagpur <span class="text-goldAccent ml-1.5">✦</span>
     </div>
 
     <!-- MAIN STICKY NAVIGATION HEADER -->
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-borderWarm shadow-[0_4px_20px_rgba(36,28,24,0.03)]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20 sm:h-24 gap-4">
+    <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-borderWarm shadow-[0_4px_20px_rgba(34,26,22,0.03)]">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-24 gap-2">
                 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn" aria-label="Open Menu" class="lg:hidden p-2.5 rounded-full text-espresso hover:bg-cream transition">
-                    <i class="fa-solid fa-bars text-lg"></i>
+                <button id="mobile-menu-btn" aria-label="Open Menu" class="lg:hidden p-2 rounded-full text-espresso hover:bg-cream transition shrink-0">
+                    <i class="fa-solid fa-bars text-base"></i>
                 </button>
 
                 <!-- Brand Identity -->
-                <a href="#" class="flex flex-col items-center lg:items-start group shrink-0">
-                    <div class="flex items-center space-x-2">
-                        <span class="text-champagne text-xs transition-transform duration-700 group-hover:rotate-180">✦</span>
-                        <span class="font-serif text-2xl sm:text-3xl md:text-4xl tracking-[0.25em] font-semibold text-espresso">SHYRA</span>
-                        <span class="text-champagne text-xs transition-transform duration-700 group-hover:-rotate-180">✦</span>
+                <a href="#" class="flex flex-col items-center lg:items-start group min-w-0">
+                    <div class="flex items-center space-x-1.5 sm:space-x-2">
+                        <span class="text-champagne text-[10px] sm:text-xs transition-transform duration-700 group-hover:rotate-180">✦</span>
+                        <span class="font-display text-xl sm:text-3xl md:text-4xl tracking-[0.2em] sm:tracking-[0.26em] font-semibold text-espresso truncate">SHYRA</span>
+                        <span class="text-champagne text-[10px] sm:text-xs transition-transform duration-700 group-hover:-rotate-180">✦</span>
                     </div>
-                    <span class="text-[9px] sm:text-[10px] tracking-[0.34em] uppercase text-champagne font-medium mt-0.5">Artificial & Bridal Rentals</span>
+                    <span class="text-[8px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.34em] uppercase text-champagne font-medium mt-0.5 truncate">Jewellery & Bridal Rentals</span>
                 </a>
 
                 <!-- Center Navigation Links (Desktop) -->
-                <nav class="hidden lg:flex items-center space-x-6 text-xs tracking-[0.16em] uppercase font-medium text-espresso/85">
-                    <a href="#catalog" onclick="filterProducts('necklaces')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">AD Necklace Sets</a>
+                <nav class="hidden lg:flex items-center space-x-6 text-[11px] tracking-[0.18em] uppercase font-medium text-espresso/85">
+                    <a href="#catalog" onclick="filterProducts('necklaces')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">AD Necklaces</a>
                     <a href="#catalog" onclick="filterProducts('bridal-rental')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne text-champagne font-semibold">Bridal Rentals</a>
-                    <a href="#catalog" onclick="filterProducts('earrings')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Earrings & Jhumkas</a>
-                    <a href="#catalog" onclick="filterProducts('bracelets')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Bangles & Haathphool</a>
-                    <a href="#store-location" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Visit Nagpur Store</a>
+                    <a href="#catalog" onclick="filterProducts('earrings')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Earrings</a>
+                    <a href="#catalog" onclick="filterProducts('bracelets')" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Bangles & Cuffs</a>
+                    <a href="#store-location" class="hover:text-champagne transition py-2 border-b-2 border-transparent hover:border-champagne">Nagpur Store</a>
                 </nav>
 
-                <!-- Right Search, Store & Bag -->
-                <div class="flex items-center space-x-2 sm:space-x-3">
+                <!-- Right Search, Concierge & Bag -->
+                <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
                     <!-- Quick Search Pill (Desktop) -->
                     <div class="hidden xl:flex items-center bg-cream border border-borderWarm rounded-full px-3.5 py-2 w-48 focus-within:border-champagne transition">
                         <i class="fa-solid fa-magnifying-glass text-taupe text-xs mr-2.5"></i>
                         <input id="search-input" type="text" placeholder="Search AD, Kundan, Rental..." class="bg-transparent text-xs text-espresso placeholder-taupe/70 focus:outline-none w-full">
                     </div>
 
-                    <!-- Direct WhatsApp Quick Chat -->
-                    <a href="https://wa.me/919511702775?text=Hi%20Shyra%20Jewellery!%20I%20would%20like%20to%20enquire%20about%20your%20artificial%20%26%20rental%20jewellery%20collection." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="hidden sm:flex items-center space-x-1.5 px-3.5 py-2 rounded-full bg-emerald-50 border border-emerald-200 hover:bg-emerald-600 hover:text-white text-xs text-emerald-800 transition">
-                        <i class="fa-brands fa-whatsapp text-sm"></i>
-                        <span class="hidden md:inline font-semibold">WhatsApp</span>
+                    <!-- Luxury Champagne-Themed WhatsApp Concierge -->
+                    <a href="https://wa.me/919511702775?text=Hello%20Shyra%20Jewellery!%20I%20would%20like%20to%20enquire%20about%20your%20artificial%20%26%20bridal%20rental%20jewellery%20collection." target="_blank" rel="noopener noreferrer" title="WhatsApp Concierge" class="hidden sm:flex items-center space-x-1.5 px-3.5 py-2 rounded-full btn-luxe-wa-soft text-[11px] tracking-wider uppercase font-semibold">
+                        <i class="fa-brands fa-whatsapp text-champagne text-sm"></i>
+                        <span class="hidden md:inline">Concierge</span>
                     </a>
 
                     <!-- Wishlist Button -->
-                    <button onclick="showToast('Your saved pieces are kept in your Shyra Wishlist.')" aria-label="Wishlist" class="p-2.5 rounded-full text-espresso hover:bg-cream hover:text-champagne transition relative">
-                        <i class="fa-regular fa-heart text-lg"></i>
+                    <button onclick="showToast('Your saved pieces are kept in your Shyra Wishlist.')" aria-label="Wishlist" class="p-2 rounded-full text-espresso hover:bg-cream hover:text-champagne transition relative">
+                        <i class="fa-regular fa-heart text-base sm:text-lg"></i>
                         <span id="wishlist-badge" class="hidden absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-champagne"></span>
                     </button>
 
                     <!-- Shopping Bag Button -->
-                    <button id="open-cart-btn" aria-label="Shopping Bag" class="p-2.5 rounded-full bg-cream hover:bg-sand text-espresso transition relative flex items-center space-x-2 px-3.5">
-                        <i class="fa-solid fa-bag-shopping text-base text-champagne"></i>
-                        <span id="cart-count" class="text-xs font-bold text-espresso">0</span>
+                    <button id="open-cart-btn" aria-label="Selection Bag" class="p-2 sm:p-2.5 rounded-full bg-cream hover:bg-sand text-espresso transition relative flex items-center space-x-1.5 px-2.5 sm:px-3.5 border border-borderWarm">
+                        <i class="fa-solid fa-bag-shopping text-sm sm:text-base text-champagne"></i>
+                        <span id="cart-count" class="text-xs font-semibold text-espresso">0</span>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Slide-Down Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-pearl border-b border-borderWarm px-6 py-5 space-y-3">
+        <div id="mobile-menu" class="hidden lg:hidden bg-pearl border-b border-borderWarm px-5 py-5 space-y-3">
             <div class="flex items-center bg-white border border-borderWarm rounded-full px-4 py-2.5 mb-3">
                 <i class="fa-solid fa-magnifying-glass text-taupe text-xs mr-2.5"></i>
                 <input id="mobile-search-input" type="text" placeholder="Search AD sets, Kundan, Bridal..." class="bg-transparent text-xs text-espresso focus:outline-none w-full">
             </div>
             <a href="#catalog" onclick="filterProducts('necklaces')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">AD Necklace Sets</a>
-            <a href="#catalog" onclick="filterProducts('bridal-rental')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-champagne font-semibold">Bridal Rental Sets</a>
-            <a href="#catalog" onclick="filterProducts('earrings')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Earrings & Jhumkas</a>
+            <a href="#catalog" onclick="filterProducts('bridal-rental')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-champagne font-semibold">Bridal Rental Suites</a>
+            <a href="#catalog" onclick="filterProducts('earrings')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Earrings & Chandbalis</a>
             <a href="#catalog" onclick="filterProducts('bracelets')" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Bangles & Haathphool</a>
             <a href="#store-location" class="mobile-link block text-xs tracking-[0.2em] uppercase py-2 text-espresso hover:text-champagne font-medium">Visit Fortune Mall Store</a>
         </div>
     </header>
 
     <!-- HERO BANNER: AIRY EDITORIAL SHOWCASE -->
-    <section class="relative bg-gradient-to-br from-pearl via-cream to-roseTint/60 border-b border-borderWarm overflow-hidden py-12 sm:py-20">
+    <section class="relative w-full bg-gradient-to-br from-pearl via-cream to-roseTint/60 border-b border-borderWarm overflow-hidden py-10 sm:py-20">
         <!-- Ambient Golden Glints -->
-        <div id="glint-container" class="absolute inset-0 pointer-events-none"></div>
+        <div id="glint-container" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                 
                 <!-- Left Editorial Typography -->
-                <div class="lg:col-span-6 text-center lg:text-left space-y-6">
-                    <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-white border border-borderWarm shadow-sm">
+                <div class="lg:col-span-6 text-center lg:text-left space-y-5 sm:space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-borderWarm shadow-sm">
                         <span class="w-2 h-2 rounded-full bg-champagne"></span>
-                        <span class="text-[11px] tracking-[0.22em] uppercase text-champagne font-semibold">Buy or Rent • Sitabuldi, Nagpur</span>
+                        <span class="text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-champagne font-semibold">Buy or Rent • Sitabuldi, Nagpur</span>
                     </div>
 
-                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-[62px] font-medium leading-[1.08] text-espresso">
+                    <h1 class="font-display text-3xl sm:text-5xl lg:text-[54px] font-medium leading-[1.14] text-espresso">
                         Exquisite Artificial <br>
-                        <span class="italic text-champagne-shimmer font-semibold">Bridal & AD Sets</span> <br>
+                        <span class="font-serif italic text-champagne-shimmer font-semibold">Bridal & AD Couture</span> <br>
                         To Own or Rent.
                     </h1>
 
-                    <p class="text-taupe text-sm sm:text-base md:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        Experience real-diamond brilliance without the luxury markup. Explore handcrafted AAA+ American Diamond, Rajwadi Kundan, and Antique Temple sets available for purchase and wedding rentals.
+                    <p class="text-taupe text-xs sm:text-base max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Experience real-diamond radiance without the luxury markup. Discover handcrafted AAA+ American Diamond, Rajwadi Kundan, and Antique Temple sets available for purchase and wedding rentals.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#catalog" class="w-full sm:w-auto px-8 py-4 rounded-full bg-espresso text-pearl hover:bg-champagne font-semibold text-xs tracking-[0.2em] uppercase transition duration-300 shadow-lg shadow-espresso/15 text-center">
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+                        <a href="#catalog" class="w-full sm:w-auto px-7 py-4 rounded-full bg-white border border-espresso/20 text-espresso hover:border-champagne hover:text-champagne font-semibold text-[11px] tracking-[0.2em] uppercase transition duration-300 text-center">
                             Explore Buy & Rent Catalog
                         </a>
-                        <a href="https://wa.me/919511702775?text=Hello%20Shyra%20Jewellery!%20I%20want%20to%20book%20a%20bridal%20trial%20or%20enquire%20about%20rental%20jewellery." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-[0.18em] uppercase transition duration-300 shadow-lg shadow-emerald-600/20 flex items-center justify-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        <a href="https://wa.me/919511702775?text=Hello%20Shyra%20Jewellery!%20I%20would%20like%20to%20book%20a%20bridal%20trial%20or%20enquire%20about%20rental%20jewellery." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-full btn-luxe-wa font-semibold text-[11px] tracking-[0.2em] uppercase flex items-center justify-center space-x-2.5">
+                            <i class="fa-brands fa-whatsapp text-goldAccent text-base"></i>
                             <span>Enquire on WhatsApp</span>
                         </a>
                     </div>
 
                     <!-- Artificial & Rental Assurance Badges -->
-                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-borderWarm max-w-lg mx-auto lg:mx-0">
-                        <div class="flex items-center space-x-2.5">
-                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0">
+                    <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-6 border-t border-borderWarm max-w-lg mx-auto lg:mx-0">
+                        <div class="flex flex-col sm:flex-row items-center sm:space-x-2.5 text-center sm:text-left">
+                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0 mb-1 sm:mb-0">
                                 <i class="fa-regular fa-gem text-sm"></i>
                             </div>
-                            <div class="text-left">
-                                <p class="text-xs font-semibold text-espresso">AAA+ CZ / AD</p>
-                                <p class="text-[10px] text-taupe">Real Diamond Look</p>
+                            <div>
+                                <p class="text-[11px] sm:text-xs font-semibold text-espresso">AAA+ CZ / AD</p>
+                                <p class="text-[9px] sm:text-[10px] text-taupe">Diamond Look</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-2.5">
-                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0">
+                        <div class="flex flex-col sm:flex-row items-center sm:space-x-2.5 text-center sm:text-left">
+                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0 mb-1 sm:mb-0">
                                 <i class="fa-solid fa-calendar-check text-sm"></i>
                             </div>
-                            <div class="text-left">
-                                <p class="text-xs font-semibold text-espresso">Easy Rentals</p>
-                                <p class="text-[10px] text-taupe">3-Day Wedding Slots</p>
+                            <div>
+                                <p class="text-[11px] sm:text-xs font-semibold text-espresso">Easy Rentals</p>
+                                <p class="text-[9px] sm:text-[10px] text-taupe">3-Day Slots</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-2.5">
-                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0">
+                        <div class="flex flex-col sm:flex-row items-center sm:space-x-2.5 text-center sm:text-left">
+                            <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0 mb-1 sm:mb-0">
                                 <i class="fa-solid fa-store text-sm"></i>
                             </div>
-                            <div class="text-left">
-                                <p class="text-xs font-semibold text-espresso">Fortune Mall</p>
-                                <p class="text-[10px] text-taupe">Sitabuldi, Nagpur</p>
+                            <div>
+                                <p class="text-[11px] sm:text-xs font-semibold text-espresso">Fortune Mall</p>
+                                <p class="text-[9px] sm:text-[10px] text-taupe">Sitabuldi</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Luxury Visual Collage -->
-                <div class="lg:col-span-6 relative flex justify-center">
+                <!-- Right Luxury Visual Collage (Strictly Contained for Mobile) -->
+                <div class="lg:col-span-6 relative flex justify-center w-full">
                     <div class="relative w-full max-w-lg animate-float-slow">
                         <!-- Main Editorial Frame -->
-                        <div class="rounded-[2rem] overflow-hidden bg-white p-3 shadow-[0_25px_60px_-15px_rgba(36,28,24,0.14)] border border-borderWarm">
+                        <div class="rounded-[2rem] overflow-hidden bg-white p-2.5 sm:p-3 shadow-[0_25px_60px_-15px_rgba(34,26,22,0.14)] border border-borderWarm">
                             <div class="relative rounded-[1.5rem] overflow-hidden aspect-[4/4.3]">
                                 <img 
                                     src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85" 
-                                    onerror="this.src='https://placehold.co/800x860/F6F1EA/B8893A?text=SHYRA+BRIDAL+AD+SET'"
+                                    onerror="this.src='https://placehold.co/800x860/F6F1EA/B58434?text=SHYRA+BRIDAL+AD+SET'"
                                     alt="Shyra Artificial AD Bridal Necklace Set" 
                                     class="w-full h-full object-cover hover:scale-105 transition duration-1000"
                                 >
-                                <div class="absolute inset-0 bg-gradient-to-t from-espresso/65 via-transparent to-transparent"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent"></div>
                                 
-                                <!-- Floating Product Spotlight Card -->
-                                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-borderWarm shadow-lg flex items-center justify-between gap-3">
+                                <!-- Top-Right Rental Badge Inside Frame (No Negative Offset Overflow) -->
+                                <div class="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-lg border border-borderWarm flex items-center space-x-2">
+                                    <i class="fa-solid fa-crown text-champagne text-xs"></i>
                                     <div>
-                                        <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-champagne">Buy or Rent Available</span>
-                                        <h3 class="font-serif text-xl text-espresso font-semibold">Celeste AAA+ AD Bridal Choker</h3>
-                                        <p class="text-xs text-taupe">Buy: ₹4,850 • 3-Day Rent: ₹1,450</p>
+                                        <p class="text-[9px] uppercase tracking-wider text-taupe leading-none">Rentals From</p>
+                                        <p class="font-display text-sm font-bold text-espresso mt-0.5">₹999 <span class="text-[9px] font-sans font-normal text-taupe">/ 3d</span></p>
                                     </div>
-                                    <a href="https://wa.me/919511702775?text=Hi%20Shyra%20Jewellery!%20I%20am%20interested%20in%20the%20product%3A%20*Celeste%20AAA%2B%20AD%20Bridal%20Choker*.%20Please%20share%20Buy%20%26%20Rental%20availability." target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold uppercase tracking-wider transition shrink-0 flex items-center space-x-1.5">
-                                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                                </div>
+
+                                <!-- Floating Product Spotlight Card -->
+                                <div class="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-borderWarm shadow-lg flex items-center justify-between gap-2.5">
+                                    <div class="min-w-0">
+                                        <span class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.18em] text-champagne block">Buy or Rent Available</span>
+                                        <h3 class="font-display text-sm sm:text-lg text-espresso font-semibold truncate">Celeste AAA+ AD Bridal Choker</h3>
+                                        <p class="text-[11px] text-taupe">Buy: ₹4,850 • 3-Day Rent: ₹1,450</p>
+                                    </div>
+                                    <a href="https://wa.me/919511702775?text=Hello%20Shyra%20Jewellery!%20I%20am%20interested%20in%20the%20product%3A%20*Celeste%20AAA%2B%20AD%20Bridal%20Choker*.%20Please%20share%20Buy%20%26%20Rental%20availability." target="_blank" rel="noopener noreferrer" class="px-3.5 sm:px-4 py-2.5 rounded-full btn-luxe-wa text-[10px] sm:text-xs font-semibold uppercase tracking-wider shrink-0 flex items-center space-x-1.5">
+                                        <i class="fa-brands fa-whatsapp text-goldAccent text-sm"></i>
                                         <span>Enquire</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Decorative Floating Price Tag Pill -->
-                        <div class="hidden sm:flex items-center space-x-3 bg-white px-5 py-3 rounded-2xl shadow-xl border border-borderWarm absolute -top-5 -right-5">
-                            <div class="w-10 h-10 rounded-full bg-roseTint flex items-center justify-center text-champagne">
-                                <i class="fa-solid fa-crown"></i>
-                            </div>
-                            <div>
-                                <p class="text-[10px] uppercase tracking-wider text-taupe">Bridal Rentals From</p>
-                                <p class="font-serif text-xl font-bold text-espresso">₹999 <span class="text-xs font-sans font-normal text-taupe">/ 3 days</span></p>
-                            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOP & RENT BY CATEGORY (MULTI-IMAGE GALLERY COLLAGES) -->
+    <section class="py-14 sm:py-20 bg-white border-b border-borderWarm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
+                <div>
+                    <span class="text-[11px] uppercase tracking-[0.24em] text-champagne font-semibold">Curated Lookbooks</span>
+                    <h2 class="font-display text-2xl sm:text-4xl text-espresso font-medium mt-1">Shop & Rent By Category</h2>
+                    <p class="text-xs sm:text-sm text-taupe mt-1">Explore multi-piece collections curated for weddings, sangeet & festive celebrations</p>
+                </div>
+                <a href="#catalog" onclick="filterProducts('all')" class="text-xs uppercase tracking-[0.2em] text-champagne font-semibold hover:underline self-start sm:self-auto">View All 12 Designs →</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Category 1: AD Necklace Sets (3-Image Collage) -->
+                <div onclick="filterProducts('necklaces'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="cursor-pointer group luxury-card rounded-3xl p-3 space-y-3.5">
+                    <div class="grid grid-cols-3 gap-1.5 h-48 sm:h-52 rounded-2xl overflow-hidden bg-cream">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80" onerror="this.src='https://placehold.co/300x400/F6F1EA/B58434?text=AD+Set'" alt="AD Necklace" class="col-span-2 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="grid grid-rows-2 gap-1.5 h-full">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Choker'" alt="AD Choker" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <img src="https://images.unsplash.com/photo-1601121141799-c0ea464624f1?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Pendant'" alt="Cocktail Necklace" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
                         </div>
                     </div>
+                    <div class="px-1 pb-1 flex items-center justify-between">
+                        <div>
+                            <h3 class="font-display text-base sm:text-lg font-semibold text-espresso group-hover:text-champagne transition">AD Necklace Sets</h3>
+                            <p class="text-[11px] text-taupe">American Diamond & Party Chokers</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-cream group-hover:bg-espresso group-hover:text-white flex items-center justify-center text-espresso text-xs transition">→</span>
+                    </div>
                 </div>
 
+                <!-- Category 2: Bridal Rental Suites (3-Image Collage) -->
+                <div onclick="filterProducts('bridal-rental'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="cursor-pointer group luxury-card rounded-3xl p-3 space-y-3.5">
+                    <div class="grid grid-cols-3 gap-1.5 h-48 sm:h-52 rounded-2xl overflow-hidden bg-cream">
+                        <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=500&q=80" onerror="this.src='https://placehold.co/300x400/F6F1EA/B58434?text=Bridal'" alt="Bridal Kundan Set" class="col-span-2 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="grid grid-rows-2 gap-1.5 h-full">
+                            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Kundan'" alt="Rajwadi Haar" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <img src="https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Temple'" alt="Temple Bridal" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="px-1 pb-1 flex items-center justify-between">
+                        <div>
+                            <h3 class="font-display text-base sm:text-lg font-semibold text-espresso group-hover:text-champagne transition">Bridal Rental Suites</h3>
+                            <p class="text-[11px] text-taupe">Kundan, Polki & Temple Full Combos</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-cream group-hover:bg-espresso group-hover:text-white flex items-center justify-center text-espresso text-xs transition">→</span>
+                    </div>
+                </div>
+
+                <!-- Category 3: Earrings & Chandbalis (3-Image Collage) -->
+                <div onclick="filterProducts('earrings'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="cursor-pointer group luxury-card rounded-3xl p-3 space-y-3.5">
+                    <div class="grid grid-cols-3 gap-1.5 h-48 sm:h-52 rounded-2xl overflow-hidden bg-cream">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" onerror="this.src='https://placehold.co/300x400/F6F1EA/B58434?text=Earrings'" alt="Chandbali Earrings" class="col-span-2 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="grid grid-rows-2 gap-1.5 h-full">
+                            <img src="https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Studs'" alt="AD Studs" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Jhumkas'" alt="Jhumka Drops" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="px-1 pb-1 flex items-center justify-between">
+                        <div>
+                            <h3 class="font-display text-base sm:text-lg font-semibold text-espresso group-hover:text-champagne transition">Earrings & Chandbalis</h3>
+                            <p class="text-[11px] text-taupe">Jhumkas, Danglers & Maang Tikka</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-cream group-hover:bg-espresso group-hover:text-white flex items-center justify-center text-espresso text-xs transition">→</span>
+                    </div>
+                </div>
+
+                <!-- Category 4: Bangles & Haathphool (3-Image Collage) -->
+                <div onclick="filterProducts('bracelets'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="cursor-pointer group luxury-card rounded-3xl p-3 space-y-3.5">
+                    <div class="grid grid-cols-3 gap-1.5 h-48 sm:h-52 rounded-2xl overflow-hidden bg-cream">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=500&q=80" onerror="this.src='https://placehold.co/300x400/F6F1EA/B58434?text=Bangles'" alt="Tennis Bracelet" class="col-span-2 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="grid grid-rows-2 gap-1.5 h-full">
+                            <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Kadas'" alt="Bridal Kadas" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=300&q=80" onerror="this.src='https://placehold.co/200x200/F6F1EA/B58434?text=Cuffs'" alt="AD Bangle Cuffs" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        </div>
+                    </div>
+                    <div class="px-1 pb-1 flex items-center justify-between">
+                        <div>
+                            <h3 class="font-display text-base sm:text-lg font-semibold text-espresso group-hover:text-champagne transition">Bangles & Haathphool</h3>
+                            <p class="text-[11px] text-taupe">AD Bracelets, Kadas & Bridal Chooda</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-cream group-hover:bg-espresso group-hover:text-white flex items-center justify-center text-espresso text-xs transition">→</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SHOP BY CATEGORY CIRCLES -->
-    <section class="py-12 bg-white border-b border-borderWarm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between mb-8">
-                <div>
-                    <h2 class="font-serif text-2xl sm:text-3xl text-espresso font-medium">Shop & Rent By Category</h2>
-                    <p class="text-xs sm:text-sm text-taupe mt-0.5">Handcrafted artificial jewellery curated for brides, bridesmaids & festive celebrations</p>
-                </div>
-                <a href="#catalog" onclick="filterProducts('all')" class="text-xs uppercase tracking-[0.2em] text-champagne font-semibold hover:underline">View All →</a>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:gap-8">
-                <!-- Cat 1 -->
-                <button onclick="filterProducts('necklaces'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
-                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
-                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=AD+Necklaces'" alt="AD Necklace Sets" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">AD Necklace Sets</h3>
-                        <p class="text-xs text-taupe">American Diamond & Party Chokers</p>
-                    </div>
-                </button>
-
-                <!-- Cat 2 -->
-                <button onclick="filterProducts('bridal-rental'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
-                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
-                        <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=Bridal+Rentals'" alt="Bridal Rental Combos" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">Bridal Rental Combos</h3>
-                        <p class="text-xs text-taupe">Kundan, Polki & Temple Full Suites</p>
-                    </div>
-                </button>
-
-                <!-- Cat 3 -->
-                <button onclick="filterProducts('earrings'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
-                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
-                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=Earrings'" alt="Earrings & Chandbalis" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">Earrings & Chandbalis</h3>
-                        <p class="text-xs text-taupe">Jhumkas, Danglers & Maang Tikka</p>
-                    </div>
-                </button>
-
-                <!-- Cat 4 -->
-                <button onclick="filterProducts('bracelets'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'})" class="group text-center space-y-3">
-                    <div class="aspect-square rounded-3xl overflow-hidden bg-cream border border-borderWarm group-hover:border-champagne transition p-2">
-                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" onerror="this.src='https://placehold.co/400x400/F6F1EA/B8893A?text=Bangles'" alt="Bangles & Haathphool" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-lg sm:text-xl font-semibold text-espresso group-hover:text-champagne transition">Bangles & Haathphool</h3>
-                        <p class="text-xs text-taupe">AD Bracelets, Kadas & Bridal Chooda</p>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- MAIN E-COMMERCE & RENTAL CATALOG WITH DIRECT WHATSAPP ENQUIRY -->
+    <!-- MAIN E-COMMERCE & RENTAL CATALOG WITH COHESIVE WHATSAPP ENQUIRY -->
     <section id="catalog" class="py-16 sm:py-24 bg-pearl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Catalog Header & Controls -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
                 <div>
-                    <span class="text-xs uppercase tracking-[0.26em] text-champagne font-semibold">Buy or Rent • Direct WhatsApp Ordering</span>
-                    <h2 class="font-serif text-3xl sm:text-5xl text-espresso font-medium mt-1">Artificial & Bridal Jewellery Collection</h2>
+                    <span class="text-[11px] uppercase tracking-[0.26em] text-champagne font-semibold">Buy or Rent • Direct Concierge Ordering</span>
+                    <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl text-espresso font-medium mt-1">Artificial & Bridal Jewellery Collection</h2>
                 </div>
 
                 <!-- Mode & Sort Dropdowns -->
-                <div class="flex flex-wrap items-center gap-3">
+                <div class="flex flex-wrap items-center gap-2.5">
                     <select id="mode-filter" onchange="applyAllFilters()" class="px-4 py-2.5 rounded-full bg-white border border-borderWarm text-xs text-espresso font-medium focus:outline-none focus:border-champagne">
                         <option value="all">All Options (Buy & Rent)</option>
                         <option value="rentable">Available for Rental</option>
@@ -408,32 +463,32 @@
             </div>
 
             <!-- Category Tabs -->
-            <div class="flex flex-wrap items-center gap-2.5 mb-10 pb-4 border-b border-borderWarm">
-                <button onclick="filterProducts('all')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-espresso text-pearl font-semibold" data-filter="all">
-                    All Designs (8)
+            <div class="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-borderWarm">
+                <button onclick="filterProducts('all')" class="filter-btn px-4 sm:px-5 py-2.5 rounded-full text-[11px] tracking-[0.15em] uppercase transition bg-espresso text-pearl font-semibold" data-filter="all">
+                    All Designs (12)
                 </button>
-                <button onclick="filterProducts('necklaces')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="necklaces">
-                    AD Necklace Sets
+                <button onclick="filterProducts('necklaces')" class="filter-btn px-4 sm:px-5 py-2.5 rounded-full text-[11px] tracking-[0.15em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="necklaces">
+                    AD Necklaces (3)
                 </button>
-                <button onclick="filterProducts('bridal-rental')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="bridal-rental">
-                    Bridal Rental Sets
+                <button onclick="filterProducts('bridal-rental')" class="filter-btn px-4 sm:px-5 py-2.5 rounded-full text-[11px] tracking-[0.15em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="bridal-rental">
+                    Bridal Rentals (3)
                 </button>
-                <button onclick="filterProducts('earrings')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="earrings">
-                    Earrings & Jhumkas
+                <button onclick="filterProducts('earrings')" class="filter-btn px-4 sm:px-5 py-2.5 rounded-full text-[11px] tracking-[0.15em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="earrings">
+                    Earrings (3)
                 </button>
-                <button onclick="filterProducts('bracelets')" class="filter-btn px-5 py-2.5 rounded-full text-xs tracking-[0.16em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="bracelets">
-                    Bangles & Cuffs
+                <button onclick="filterProducts('bracelets')" class="filter-btn px-4 sm:px-5 py-2.5 rounded-full text-[11px] tracking-[0.15em] uppercase transition bg-white border border-borderWarm text-espresso hover:border-champagne" data-filter="bracelets">
+                    Bangles & Cuffs (3)
                 </button>
             </div>
 
             <!-- Product Grid -->
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Rendered via JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- HOW BRIDAL RENTAL WORKS AT SHYRA (3-Step Boutique Guide) -->
+    <!-- HOW BRIDAL RENTAL WORKS AT SHYRA -->
     <section id="rental-guide" class="py-16 sm:py-24 bg-gradient-to-r from-cream via-roseTint/70 to-cream border-y border-borderWarm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -443,47 +498,47 @@
                     <div class="rounded-[2rem] overflow-hidden bg-white p-3 border border-borderWarm shadow-xl">
                         <img 
                             src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=950&q=85" 
-                            onerror="this.src='https://placehold.co/800x650/F6F1EA/B8893A?text=SHYRA+BRIDAL+RENTAL'"
+                            onerror="this.src='https://placehold.co/800x650/F6F1EA/B58434?text=SHYRA+BRIDAL+RENTAL'"
                             alt="Shyra Bridal Jewellery Rental" 
-                            class="w-full h-[360px] sm:h-[430px] object-cover rounded-[1.5rem]"
+                            class="w-full h-[340px] sm:h-[430px] object-cover rounded-[1.5rem]"
                         >
                     </div>
                 </div>
 
-                <!-- Right Rental Steps & Finish Preview -->
+                <!-- Right Rental Steps -->
                 <div class="lg:col-span-7 space-y-6 reveal">
-                    <span class="text-xs uppercase tracking-[0.26em] text-champagne font-semibold">Smart Bridal Luxury</span>
-                    <h2 class="font-serif text-3xl sm:text-5xl text-espresso font-medium leading-tight">
-                        Rent Designer Bridal Sets for <span class="italic text-champagne">Your Wedding & Sangeet</span>
+                    <span class="text-[11px] uppercase tracking-[0.26em] text-champagne font-semibold">Smart Bridal Couture</span>
+                    <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl text-espresso font-medium leading-tight">
+                        Rent Designer Bridal Sets for <span class="font-serif italic text-champagne">Your Wedding & Sangeet</span>
                     </h2>
-                    <p class="text-taupe text-sm sm:text-base leading-relaxed">
-                        Why spend lakhs on heavy bridal sets worn once? Choose from over 200+ Rajwadi Kundan, Pastel AD, and Temple bridal combos at our Fortune Mall store in Nagpur—sanitized, custom-fitted, and hassle-free.
+                    <p class="text-taupe text-xs sm:text-base leading-relaxed">
+                        Why spend lakhs on heavy bridal sets worn once? Choose from over 200+ Rajwadi Kundan, Pastel AD, and Temple bridal combos at our Fortune Mall store in Nagpur—sanitized, custom-fitted, and effortless.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
                         <div class="p-4 rounded-2xl bg-white border border-borderWarm space-y-1.5">
-                            <span class="text-xs font-bold text-champagne uppercase tracking-widest">Step 01</span>
-                            <h4 class="font-serif text-lg font-semibold text-espresso">Select & WhatsApp</h4>
-                            <p class="text-xs text-taupe">Tap "WhatsApp Enquiry" on any set to check availability for your wedding dates.</p>
+                            <span class="text-[10px] font-bold text-champagne uppercase tracking-widest">Step 01</span>
+                            <h4 class="font-display text-base font-semibold text-espresso">Select & Message</h4>
+                            <p class="text-xs text-taupe">Tap "Enquire on WhatsApp" on any set to check availability for your wedding dates.</p>
                         </div>
                         <div class="p-4 rounded-2xl bg-white border border-borderWarm space-y-1.5">
-                            <span class="text-xs font-bold text-champagne uppercase tracking-widest">Step 02</span>
-                            <h4 class="font-serif text-lg font-semibold text-espresso">Store Trial & Fit</h4>
-                            <p class="text-xs text-taupe">Visit our Sitabuldi showroom to try sets with your lehenga/saree & block your slot.</p>
+                            <span class="text-[10px] font-bold text-champagne uppercase tracking-widest">Step 02</span>
+                            <h4 class="font-display text-base font-semibold text-espresso">Store Trial & Fit</h4>
+                            <p class="text-xs text-taupe">Visit our Sitabuldi showroom to try sets with your bridal outfit & block your slot.</p>
                         </div>
                         <div class="p-4 rounded-2xl bg-white border border-borderWarm space-y-1.5">
-                            <span class="text-xs font-bold text-champagne uppercase tracking-widest">Step 03</span>
-                            <h4 class="font-serif text-lg font-semibold text-espresso">Shine & Return</h4>
+                            <span class="text-[10px] font-bold text-champagne uppercase tracking-widest">Step 03</span>
+                            <h4 class="font-display text-base font-semibold text-espresso">Shine & Return</h4>
                             <p class="text-xs text-taupe">Enjoy a 3-day rental window and return easily after your celebration.</p>
                         </div>
                     </div>
 
-                    <div class="pt-2 flex flex-wrap gap-4">
-                        <a href="https://wa.me/919511702775?text=Hi%20Shyra%20Jewellery!%20I%20want%20to%20know%20more%20about%20Bridal%20Jewellery%20Rental%20packages." target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold uppercase tracking-[0.18em] transition flex items-center space-x-2 shadow-md">
-                            <i class="fa-brands fa-whatsapp text-base"></i>
-                            <span>Ask Rental Packages on WhatsApp</span>
+                    <div class="pt-2 flex flex-wrap gap-3.5">
+                        <a href="https://wa.me/919511702775?text=Hello%20Shyra%20Jewellery!%20I%20want%20to%20know%20more%20about%20Bridal%20Jewellery%20Rental%20packages." target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-full btn-luxe-wa text-[11px] font-semibold uppercase tracking-[0.18em] flex items-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-goldAccent text-base"></i>
+                            <span>Ask Rental Packages</span>
                         </a>
-                        <a href="#store-location" class="px-7 py-3.5 rounded-full bg-white border border-borderWarm text-espresso hover:border-champagne text-xs font-semibold uppercase tracking-[0.18em] transition">
+                        <a href="#store-location" class="px-7 py-3.5 rounded-full bg-white border border-borderWarm text-espresso hover:border-champagne text-[11px] font-semibold uppercase tracking-[0.18em] transition">
                             Get Store Directions
                         </a>
                     </div>
@@ -496,21 +551,21 @@
     <!-- NAGPUR FLAGSHIP STORE DETAILS & GOOGLE MAPS LOCATION -->
     <section id="store-location" class="py-16 sm:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <div class="rounded-[2rem] bg-pearl border border-borderWarm p-8 sm:p-12 shadow-[0_20px_50px_-15px_rgba(36,28,24,0.08)]">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="rounded-[2rem] bg-pearl border border-borderWarm p-6 sm:p-12 shadow-[0_20px_50px_-15px_rgba(34,26,22,0.08)]">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center">
                     
                     <!-- Store Address, Timings & Direct Contact -->
                     <div class="lg:col-span-6 space-y-6">
-                        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-roseTint text-champagne text-[11px] font-bold uppercase tracking-widest">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-roseTint text-champagne text-[10px] sm:text-[11px] font-bold uppercase tracking-widest">
                             <i class="fa-solid fa-location-dot"></i>
                             <span>Flagship Showroom — Nagpur</span>
                         </div>
 
-                        <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-medium leading-tight">
-                            Visit Shyra Jewellery at <span class="italic text-champagne">Fortune Mall, Sitabuldi</span>
+                        <h2 class="font-display text-2xl sm:text-4xl text-espresso font-medium leading-tight">
+                            Visit Shyra Jewellery at <span class="font-serif italic text-champagne">Fortune Mall, Sitabuldi</span>
                         </h2>
 
-                        <p class="text-taupe text-sm leading-relaxed">
+                        <p class="text-taupe text-xs sm:text-sm leading-relaxed">
                             Step into our Nagpur boutique to experience our complete collection of anti-tarnish artificial jewellery, AAA+ American Diamond necklace sets, and custom bridal rental suites in person.
                         </p>
 
@@ -520,8 +575,8 @@
                                     <i class="fa-solid fa-map-pin text-sm"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-espresso">Store Address</p>
-                                    <p class="text-taupe text-xs sm:text-sm mt-0.5">
+                                    <p class="font-semibold text-espresso text-xs sm:text-sm">Store Address</p>
+                                    <p class="text-taupe text-xs mt-0.5 leading-relaxed">
                                         Shyra Jewellery (Shypra Handicrafts), Shop No. GS-39, Ground Floor, Fortune Mall, Munje Square, Sitabuldi, Nagpur, Maharashtra 440012
                                     </p>
                                 </div>
@@ -532,20 +587,20 @@
                                     <i class="fa-regular fa-clock text-sm"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-espresso">Store Timings</p>
-                                    <p class="text-taupe text-xs sm:text-sm mt-0.5">
+                                    <p class="font-semibold text-espresso text-xs sm:text-sm">Store Timings</p>
+                                    <p class="text-taupe text-xs mt-0.5">
                                         Monday – Saturday: 10:30 AM – 9:30 PM • Sunday: 10:00 AM – 9:00 PM
                                     </p>
                                 </div>
                             </div>
 
                             <div class="flex items-start space-x-3.5">
-                                <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-emerald-600 shrink-0 mt-0.5">
+                                <div class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-champagne shrink-0 mt-0.5">
                                     <i class="fa-brands fa-whatsapp text-base"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-espresso">WhatsApp & Store Enquiry</p>
-                                    <p class="text-taupe text-xs sm:text-sm mt-0.5">
+                                    <p class="font-semibold text-espresso text-xs sm:text-sm">WhatsApp & Store Concierge</p>
+                                    <p class="text-taupe text-xs mt-0.5">
                                         +91 95117 02775 • Rated 4.7 ★ by Nagpur Brides & Shoppers
                                     </p>
                                 </div>
@@ -553,20 +608,20 @@
                         </div>
 
                         <div class="flex flex-wrap gap-3 pt-2">
-                            <a href="https://maps.app.goo.gl/5qW5QNCWTaRysFWQ8" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-espresso text-pearl hover:bg-champagne text-xs font-semibold uppercase tracking-[0.18em] transition flex items-center space-x-2">
-                                <i class="fa-solid fa-diamond-turn-right"></i>
+                            <a href="https://maps.app.goo.gl/5qW5QNCWTaRysFWQ8" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-white border border-espresso/20 text-espresso hover:border-champagne hover:text-champagne text-[11px] font-semibold uppercase tracking-[0.18em] transition flex items-center space-x-2">
+                                <i class="fa-solid fa-diamond-turn-right text-champagne"></i>
                                 <span>Open in Google Maps</span>
                             </a>
-                            <a href="https://wa.me/919511702775?text=Hi%20Shyra%20Jewellery!%20Please%20share%20your%20Fortune%20Mall%20Sitabuldi%20store%20location%20and%20timings." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold uppercase tracking-[0.18em] transition flex items-center space-x-2">
-                                <i class="fa-brands fa-whatsapp text-sm"></i>
-                                <span>WhatsApp Store</span>
+                            <a href="https://wa.me/919511702775?text=Hello%20Shyra%20Jewellery!%20Please%20share%20your%20Fortune%20Mall%20Sitabuldi%20store%20location%20and%20timings." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full btn-luxe-wa text-[11px] font-semibold uppercase tracking-[0.18em] flex items-center space-x-2">
+                                <i class="fa-brands fa-whatsapp text-goldAccent text-sm"></i>
+                                <span>Message Store</span>
                             </a>
                         </div>
                     </div>
 
                     <!-- Right Embedded Map & Bridal Trial Form -->
                     <div class="lg:col-span-6 space-y-5">
-                        <div class="rounded-2xl overflow-hidden border border-borderWarm shadow-md h-64 sm:h-72 bg-cream relative">
+                        <div class="rounded-2xl overflow-hidden border border-borderWarm shadow-md h-60 sm:h-72 bg-cream relative">
                             <iframe 
                                 title="Shyra Jewellery Fortune Mall Sitabuldi Nagpur Location"
                                 src="https://maps.google.com/maps?q=Fortune%20Mall,%20Munje%20Square,%20Sitabuldi,%20Nagpur,%20Maharashtra%20440012&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -577,13 +632,14 @@
                         </div>
 
                         <!-- Quick Bridal Trial Request -->
-                        <form id="appointment-form" class="p-5 rounded-2xl bg-white border border-borderWarm space-y-3">
-                            <p class="text-xs font-bold uppercase tracking-wider text-espresso">Book a Free Bridal Trial at Fortune Mall</p>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <form id="appointment-form" class="p-4 sm:p-5 rounded-2xl bg-white border border-borderWarm space-y-3">
+                            <p class="text-[11px] font-bold uppercase tracking-wider text-espresso">Book a Free Bridal Trial at Fortune Mall</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                                 <input id="trial-name" type="text" required placeholder="Your Name" class="px-3.5 py-2.5 rounded-xl bg-pearl border border-borderWarm text-xs text-espresso focus:outline-none focus:border-champagne">
                                 <input id="trial-date" type="date" required class="px-3.5 py-2.5 rounded-xl bg-pearl border border-borderWarm text-xs text-espresso focus:outline-none focus:border-champagne">
-                                <button type="submit" class="px-4 py-2.5 rounded-xl bg-espresso text-pearl hover:bg-champagne text-xs font-semibold uppercase tracking-wider transition">
-                                    Book via WhatsApp
+                                <button type="submit" class="px-4 py-2.5 rounded-xl btn-luxe-wa text-[11px] font-semibold uppercase tracking-wider flex items-center justify-center space-x-1.5">
+                                    <i class="fa-brands fa-whatsapp text-goldAccent"></i>
+                                    <span>Book Slot</span>
                                 </button>
                             </div>
                         </form>
@@ -595,22 +651,22 @@
     </section>
 
     <!-- CLEAN LUXURY FOOTER -->
-    <footer class="bg-cream border-t border-borderWarm pt-16 pb-10">
+    <footer class="bg-cream border-t border-borderWarm pt-14 pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-borderWarm">
                 <div class="md:col-span-2 space-y-4">
                     <div class="flex items-center space-x-2">
                         <span class="text-champagne text-sm">✦</span>
-                        <span class="font-serif text-2xl tracking-[0.25em] font-semibold text-espresso">SHYRA JEWELLERY</span>
+                        <span class="font-display text-xl sm:text-2xl tracking-[0.24em] font-semibold text-espresso">SHYRA JEWELLERY</span>
                     </div>
-                    <p class="text-taupe text-sm max-w-md leading-relaxed">
-                        Nagpur's destination for premium artificial jewellery, AAA+ American Diamond necklace sets, and designer bridal jewellery rentals.
+                    <p class="text-taupe text-xs sm:text-sm max-w-md leading-relaxed">
+                        Nagpur's premier destination for luxury artificial jewellery, AAA+ American Diamond necklace sets, and designer bridal jewellery rentals.
                     </p>
                     <p class="text-xs text-espresso font-medium">
                         <i class="fa-solid fa-location-dot text-champagne mr-1.5"></i> GS-39, Fortune Mall, Munje Square, Sitabuldi, Nagpur 440012
                     </p>
                     <div class="flex space-x-3 pt-1">
-                        <a href="https://wa.me/919511702775" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-emerald-600 hover:bg-emerald-600 hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://wa.me/919511702775" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-espresso hover:border-champagne hover:text-champagne transition"><i class="fa-brands fa-whatsapp"></i></a>
                         <a href="https://maps.app.goo.gl/5qW5QNCWTaRysFWQ8" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-espresso hover:border-champagne hover:text-champagne transition"><i class="fa-solid fa-location-dot"></i></a>
                         <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white border border-borderWarm flex items-center justify-center text-espresso hover:border-champagne hover:text-champagne transition"><i class="fa-brands fa-instagram"></i></a>
                     </div>
@@ -618,7 +674,7 @@
 
                 <div>
                     <h4 class="text-xs uppercase tracking-[0.2em] text-espresso font-bold mb-4">Collections</h4>
-                    <ul class="space-y-2.5 text-sm text-taupe">
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-taupe">
                         <li><a href="#catalog" onclick="filterProducts('necklaces')" class="hover:text-champagne transition">AD Necklace Sets (Buy)</a></li>
                         <li><a href="#catalog" onclick="filterProducts('bridal-rental')" class="hover:text-champagne transition">Bridal Rental Suites</a></li>
                         <li><a href="#catalog" onclick="filterProducts('earrings')" class="hover:text-champagne transition">Jhumkas & Chandbalis</a></li>
@@ -628,7 +684,7 @@
 
                 <div>
                     <h4 class="text-xs uppercase tracking-[0.2em] text-espresso font-bold mb-4">Visit & Contact</h4>
-                    <ul class="space-y-2.5 text-sm text-taupe">
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-taupe">
                         <li><a href="#store-location" class="hover:text-champagne transition">Fortune Mall, Sitabuldi</a></li>
                         <li><a href="#rental-guide" class="hover:text-champagne transition">How Bridal Rental Works</a></li>
                         <li><a href="https://maps.app.goo.gl/5qW5QNCWTaRysFWQ8" target="_blank" rel="noopener noreferrer" class="hover:text-champagne transition">Google Maps Directions</a></li>
@@ -637,22 +693,22 @@
                 </div>
             </div>
 
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-taupe gap-4">
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs text-taupe gap-4 text-center sm:text-left">
                 <p>© 2026 SHYRA JEWELLERY (Shypra Handicrafts), Nagpur. All Rights Reserved.</p>
-                <p>Artificial & Imitation Fine Jewellery • Buy & Bridal Rentals • Sitabuldi, Nagpur</p>
+                <p>Artificial & Imitation Fine Jewellery • Buy & Bridal Rentals</p>
             </div>
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP CONCIERGE BUTTON -->
-    <a href="https://wa.me/919511702775?text=Hi%20Shyra%20Jewellery!%20I%20am%20browsing%20your%20website%20and%20would%20like%20to%20enquire%20about%20a%20jewellery%20piece." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 left-6 z-40 flex items-center space-x-2.5 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-2xl transition transform hover:scale-105">
-        <i class="fa-brands fa-whatsapp text-xl"></i>
-        <span class="text-xs font-semibold tracking-wider hidden sm:inline">WhatsApp Us</span>
+    <!-- LUXURY CHAMPAGNE & ESPRESSO FLOATING WHATSAPP CONCIERGE -->
+    <a href="https://wa.me/919511702775?text=Hello%20Shyra%20Jewellery!%20I%20am%20browsing%20your%20website%20and%20would%20like%20to%20enquire%20about%20a%20jewellery%20piece." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Concierge" class="fixed bottom-5 right-5 z-40 flex items-center space-x-2.5 btn-luxe-wa px-4 py-3 rounded-full shadow-2xl">
+        <i class="fa-brands fa-whatsapp text-goldAccent text-lg"></i>
+        <span class="text-[11px] font-semibold uppercase tracking-[0.16em] hidden sm:inline">Concierge</span>
     </a>
 
     <!-- PRODUCT QUICK-VIEW MODAL -->
     <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-espresso/60 backdrop-blur-sm">
-        <div class="bg-white border border-borderWarm rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative">
+        <div class="bg-white border border-borderWarm rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative max-h-[90vh] overflow-y-auto">
             <button onclick="closeProductModal()" aria-label="Close Modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-pearl text-espresso hover:bg-espresso hover:text-white flex items-center justify-center border border-borderWarm transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -670,8 +726,8 @@
             <!-- Header -->
             <div class="flex items-center justify-between pb-5 border-b border-borderWarm">
                 <div>
-                    <h3 class="font-serif text-2xl font-semibold text-espresso">Your Selection Bag</h3>
-                    <p class="text-xs text-taupe">Order online or send your shortlist directly on WhatsApp</p>
+                    <h3 class="font-display text-xl font-semibold text-espresso">Your Selection Bag</h3>
+                    <p class="text-xs text-taupe">Send your shortlist directly on WhatsApp</p>
                 </div>
                 <button id="close-cart-btn" class="w-9 h-9 rounded-full bg-pearl border border-borderWarm text-espresso hover:bg-espresso hover:text-white flex items-center justify-center transition">
                     <i class="fa-solid fa-xmark"></i>
@@ -687,13 +743,13 @@
             <div class="pt-5 border-t border-borderWarm space-y-3 bg-pearl -mx-6 -mb-6 p-6">
                 <div class="flex items-center justify-between">
                     <span class="text-espresso uppercase tracking-wider text-xs font-bold">Estimated Buy Total</span>
-                    <span id="cart-total" class="font-serif text-2xl font-bold text-espresso">₹0</span>
+                    <span id="cart-total" class="font-display text-xl font-bold text-espresso">₹0</span>
                 </div>
-                <button onclick="sendCartToWhatsApp()" class="w-full py-3.5 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 font-semibold text-xs tracking-[0.18em] uppercase transition shadow-md flex items-center justify-center space-x-2">
-                    <i class="fa-brands fa-whatsapp text-base"></i>
+                <button onclick="sendCartToWhatsApp()" class="w-full py-3.5 rounded-full btn-luxe-wa font-semibold text-[11px] tracking-[0.18em] uppercase flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-goldAccent text-base"></i>
                     <span>Send Shortlist on WhatsApp</span>
                 </button>
-                <button onclick="checkoutOrder()" class="w-full py-3.5 rounded-full bg-espresso text-pearl hover:bg-champagne font-semibold text-xs tracking-[0.18em] uppercase transition">
+                <button onclick="checkoutOrder()" class="w-full py-3.5 rounded-full bg-white border border-borderWarm text-espresso hover:border-champagne font-semibold text-[11px] tracking-[0.18em] uppercase transition">
                     Reserve Order Online
                 </button>
             </div>
@@ -701,518 +757,578 @@
     </div>
 
     <!-- CUSTOM TOAST NOTIFICATION -->
-    <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-500 pointer-events-none">
-        <div class="bg-espresso text-pearl px-5 py-3.5 rounded-2xl shadow-2xl flex items-center space-x-3 max-w-sm">
+    <div id="toast-notification" class="fixed bottom-20 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-500 pointer-events-none">
+        <div class="bg-espresso text-pearl border border-goldAccent/40 px-5 py-3.5 rounded-2xl shadow-2xl flex items-center space-x-3 max-w-xs sm:max-w-sm">
             <span class="text-goldAccent text-base">✦</span>
-            <p id="toast-message" class="text-xs sm:text-sm"></p>
+            <p id="toast-message" class="text-xs"></p>
         </div>
     </div>
 
     <!-- INTERACTIVE APPLICATION SCRIPT -->
     <script>
-        const WHATSAPP_NUMBER = "919511702775";
+        try {
+            const WHATSAPP_NUMBER = "919511702775";
 
-        // Generate direct WhatsApp URL with the product's exact name
-        function getWhatsAppProductLink(productName, mode = "Buy or Rent") {
-            const text = `Hello Shyra Jewellery! I am interested in the product: *${productName}* (${mode}). Please share price, availability & more photos.`;
-            return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-        }
-
-        // Artificial, AD, Kundan & Bridal Rental Jewellery Catalog
-        const products = [
-            {
-                id: 1,
-                name: "Celeste AAA+ AD Bridal Choker Set",
-                category: "necklaces",
-                badge: "Buy or Rent • Bestseller",
-                price: 4850,
-                originalPrice: 6200,
-                rentPrice: 1450,
-                isRentable: true,
-                finish: "Rose Gold Polish • Anti-Tarnish",
-                stones: "AAA+ Cubic Zirconia (American Diamonds)",
-                image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85",
-                description: "Hand-set with high-refraction AAA+ American Diamonds in a flexible rose-gold plated collar with matching drop earrings. Available to purchase or rent for 3 days."
-            },
-            {
-                id: 2,
-                name: "Rajwadi Maharani Kundan & Emerald Bridal Combo",
-                category: "bridal-rental",
-                badge: "Bridal Rental Suite",
-                price: 12500,
-                originalPrice: 15800,
-                rentPrice: 3200,
-                isRentable: true,
-                finish: "22K Antique Matte Gold Plating",
-                stones: "Pachi Kundan, Hydro Emeralds & Pearls",
-                image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=85",
-                description: "Complete bridal rental combo including Choker, Rani Haar, Jhumkas, Maang Tikka, Nath & Haathphool—custom-fitted at our Fortune Mall, Sitabuldi showroom."
-            },
-            {
-                id: 3,
-                name: "Noor-e-Nizam Polki & Pastel Meenakari Set",
-                category: "bridal-rental",
-                badge: "Sangeet & Reception Pick",
-                price: 9800,
-                originalPrice: 12000,
-                rentPrice: 2500,
-                isRentable: true,
-                finish: "Victorian Gold Polish",
-                stones: "Uncut Polki Glass, Mint Beads & Pearls",
-                image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=85",
-                description: "Regal pastel mint and uncut polki bridal necklace set with heavy chandbalis and tikka. Ideal for Sangeet, Engagement & Reception brides."
-            },
-            {
-                id: 4,
-                name: "Zoya AD & Emerald Chandbali Earrings",
-                category: "earrings",
-                badge: "Buy Only • Lightweight",
-                price: 1650,
-                originalPrice: 2200,
-                rentPrice: null,
-                isRentable: false,
-                finish: "Rhodium & Gold Dual Tone",
-                stones: "Micro-Pavé American Diamonds & Monalisa Stone",
-                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=85",
-                description: "Feather-light festive chandbalis crafted with emerald-cut Monalisa stones and shimmering AD borders for effortless all-night comfort."
-            },
-            {
-                id: 5,
-                name: "Seraphina AD Solitaire Tennis Bracelet",
-                category: "bracelets",
-                badge: "Anti-Tarnish Daily Wear",
-                price: 1890,
-                originalPrice: 2450,
-                rentPrice: null,
-                isRentable: false,
-                finish: "18K Rose Gold Vermeil Finish",
-                stones: "4mm Solitaire-Cut AAA+ Zirconia",
-                image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=85",
-                description: "Sleek, waterproof anti-tarnish American Diamond tennis bracelet with box lock—pairs effortlessly with watches and cocktail outfits."
-            },
-            {
-                id: 6,
-                name: "Aria Dainty Cocktail AD Necklace Set",
-                category: "necklaces",
-                badge: "Buy or Rent",
-                price: 2750,
-                originalPrice: 3500,
-                rentPrice: 999,
-                isRentable: true,
-                finish: "Platinum Rhodium Finish",
-                stones: "Pear & Marquise Cut American Diamonds",
-                image: "https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=800&q=85",
-                description: "Minimalist yet dazzling teardrop AD necklace and stud set crafted for bridesmaids, cocktail evenings, and engagement guests."
-            },
-            {
-                id: 7,
-                name: "Padmavati Temple Lakshmi Bridal Haar",
-                category: "bridal-rental",
-                badge: "South & Maharashtrian Bridal",
-                price: 8900,
-                originalPrice: 11200,
-                rentPrice: 2200,
-                isRentable: true,
-                finish: "Authentic Geru Matte Temple Finish",
-                stones: "Kemp Rubies, Emeralds & Guttapusalu Pearls",
-                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=85",
-                description: "Intricately sculpted brass-alloy temple long haar with matching jhumkas and waist belt (kamarbandh) available for wedding rentals."
-            },
-            {
-                id: 8,
-                name: "Miraya Kundan & Pearl Bridal Haathphool Pair",
-                category: "bracelets",
-                badge: "Buy or Rent",
-                price: 2150,
-                originalPrice: 2800,
-                rentPrice: 750,
-                isRentable: true,
-                finish: "22K Gold Plated Brass",
-                stones: "Mirror Kundan & Fresh-Look Pearls",
-                image: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=85",
-                description: "Adjustable bridal hand-harness (Haathphool) pair designed to complement Kundan and Rajwadi bridal sets."
+            // Generate direct WhatsApp URL with the product's exact name
+            function getWhatsAppProductLink(productName, mode) {
+                const enquiryMode = mode || "Buy or Rent";
+                const text = "Hello Shyra Jewellery! I am interested in the product: *" + productName + "* (" + enquiryMode + "). Please share price, availability & more photos.";
+                return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
             }
-        ];
 
-        // State Variables
-        let currentCategory = 'all';
-        let cart = [];
-        let wishlist = new Set();
+            // Expanded 12-Piece Artificial, AD, Kundan & Bridal Rental Jewellery Catalog (3 per category)
+            const products = [
+                {
+                    id: 1,
+                    name: "Celeste AAA+ AD Bridal Choker Set",
+                    category: "necklaces",
+                    badge: "Buy or Rent • Bestseller",
+                    price: 4850,
+                    originalPrice: 6200,
+                    rentPrice: 1450,
+                    isRentable: true,
+                    finish: "Rose Gold Polish • Anti-Tarnish",
+                    stones: "AAA+ Cubic Zirconia (American Diamonds)",
+                    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85",
+                    description: "Hand-set with high-refraction AAA+ American Diamonds in a flexible rose-gold plated collar with matching drop earrings. Available to purchase or rent for 3 days."
+                },
+                {
+                    id: 2,
+                    name: "Rajwadi Maharani Kundan Bridal Combo",
+                    category: "bridal-rental",
+                    badge: "Bridal Rental Suite",
+                    price: 12500,
+                    originalPrice: 15800,
+                    rentPrice: 3200,
+                    isRentable: true,
+                    finish: "22K Antique Matte Gold Plating",
+                    stones: "Pachi Kundan, Hydro Emeralds & Pearls",
+                    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=85",
+                    description: "Complete bridal rental combo including Choker, Rani Haar, Jhumkas, Maang Tikka, Nath & Haathphool—custom-fitted at our Fortune Mall, Sitabuldi showroom."
+                },
+                {
+                    id: 3,
+                    name: "Noor-e-Nizam Polki & Pastel Meenakari Set",
+                    category: "bridal-rental",
+                    badge: "Sangeet & Reception Pick",
+                    price: 9800,
+                    originalPrice: 12000,
+                    rentPrice: 2500,
+                    isRentable: true,
+                    finish: "Victorian Gold Polish",
+                    stones: "Uncut Polki Glass, Mint Beads & Pearls",
+                    image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=85",
+                    description: "Regal pastel mint and uncut polki bridal necklace set with heavy chandbalis and tikka. Ideal for Sangeet, Engagement & Reception brides."
+                },
+                {
+                    id: 4,
+                    name: "Zoya AD & Emerald Chandbali Earrings",
+                    category: "earrings",
+                    badge: "Buy Only • Lightweight",
+                    price: 1650,
+                    originalPrice: 2200,
+                    rentPrice: null,
+                    isRentable: false,
+                    finish: "Rhodium & Gold Dual Tone",
+                    stones: "Micro-Pavé American Diamonds & Monalisa Stone",
+                    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=85",
+                    description: "Feather-light festive chandbalis crafted with emerald-cut Monalisa stones and shimmering AD borders for effortless all-night comfort."
+                },
+                {
+                    id: 5,
+                    name: "Seraphina AD Solitaire Tennis Bracelet",
+                    category: "bracelets",
+                    badge: "Anti-Tarnish Daily Wear",
+                    price: 1890,
+                    originalPrice: 2450,
+                    rentPrice: null,
+                    isRentable: false,
+                    finish: "18K Rose Gold Vermeil Finish",
+                    stones: "4mm Solitaire-Cut AAA+ Zirconia",
+                    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=85",
+                    description: "Sleek, waterproof anti-tarnish American Diamond tennis bracelet with box lock—pairs effortlessly with watches and cocktail outfits."
+                },
+                {
+                    id: 6,
+                    name: "Aria Dainty Cocktail AD Necklace Set",
+                    category: "necklaces",
+                    badge: "Buy or Rent",
+                    price: 2750,
+                    originalPrice: 3500,
+                    rentPrice: 999,
+                    isRentable: true,
+                    finish: "Platinum Rhodium Finish",
+                    stones: "Pear & Marquise Cut American Diamonds",
+                    image: "https://images.unsplash.com/photo-1601121141799-c0ea464624f1?auto=format&fit=crop&w=800&q=85",
+                    description: "Minimalist yet dazzling teardrop AD necklace and stud set crafted for bridesmaids, cocktail evenings, and engagement guests."
+                },
+                {
+                    id: 7,
+                    name: "Padmavati Temple Lakshmi Bridal Haar",
+                    category: "bridal-rental",
+                    badge: "Maharashtrian & South Bridal",
+                    price: 8900,
+                    originalPrice: 11200,
+                    rentPrice: 2200,
+                    isRentable: true,
+                    finish: "Authentic Geru Matte Temple Finish",
+                    stones: "Kemp Rubies, Emeralds & Guttapusalu Pearls",
+                    image: "https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?auto=format&fit=crop&w=800&q=85",
+                    description: "Intricately sculpted brass-alloy temple long haar with matching jhumkas and waist belt (kamarbandh) available for wedding rentals."
+                },
+                {
+                    id: 8,
+                    name: "Miraya Kundan & Pearl Bridal Haathphool",
+                    category: "bracelets",
+                    badge: "Buy or Rent",
+                    price: 2150,
+                    originalPrice: 2800,
+                    rentPrice: 750,
+                    isRentable: true,
+                    finish: "22K Gold Plated Brass",
+                    stones: "Mirror Kundan & Fresh-Look Pearls",
+                    image: "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=85",
+                    description: "Adjustable bridal hand-harness (Haathphool) pair designed to complement Kundan and Rajwadi bridal sets."
+                },
+                {
+                    id: 9,
+                    name: "Aurelia Layered Ruby & AD Reception Set",
+                    category: "necklaces",
+                    badge: "Buy or Rent • Reception Pick",
+                    price: 5400,
+                    originalPrice: 6900,
+                    rentPrice: 1650,
+                    isRentable: true,
+                    finish: "18K Rose & Rhodium Dual Polish",
+                    stones: "Pigeon-Blood Hydro Rubies & AAA+ AD",
+                    image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=85",
+                    description: "Double-tier American Diamond statement necklace accented with teardrop crimson rubies and matching cocktail earrings."
+                },
+                {
+                    id: 10,
+                    name: "Étoile Cushion-Cut AD Halo Studs",
+                    category: "earrings",
+                    badge: "Anti-Tarnish Everyday",
+                    price: 1290,
+                    originalPrice: 1750,
+                    rentPrice: null,
+                    isRentable: false,
+                    finish: "Platinum Rhodium Finish",
+                    stones: "Solitaire Cushion & Micro-Pavé AD",
+                    image: "https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=800&q=85",
+                    description: "Luminous cushion-halo American Diamond studs designed to give the unmistakable sparkle of real diamond solitaires."
+                },
+                {
+                    id: 11,
+                    name: "Kaveri Antique Pearl & Kemp Jhumkas",
+                    category: "earrings",
+                    badge: "Festive & Haldi Favourite",
+                    price: 1450,
+                    originalPrice: 1950,
+                    rentPrice: null,
+                    isRentable: false,
+                    finish: "Matte Antique Gold Polish",
+                    stones: "Temple Kemp Stones & Pearl Drops",
+                    image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=85",
+                    description: "Handcrafted dome jhumkas finished with delicate pearl clusters—pairs effortlessly with silk sarees and lehengas."
+                },
+                {
+                    id: 12,
+                    name: "Valeria Floral AD Openable Kada Bangle",
+                    category: "bracelets",
+                    badge: "Buy Only • Bestseller",
+                    price: 2350,
+                    originalPrice: 2990,
+                    rentPrice: null,
+                    isRentable: false,
+                    finish: "18K Rose Gold Anti-Tarnish",
+                    stones: "Marquise & Round Brilliant AD",
+                    image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=85",
+                    description: "Sleek hinge-opening oval AD kada bangle engineered for a snug, comfortable wrist fit for weddings and parties."
+                }
+            ];
 
-        function formatINR(amount) {
-            return '₹' + amount.toLocaleString('en-IN');
-        }
+            let currentCategory = 'all';
+            let cart = [];
+            let wishlist = new Set();
 
-        // Category Filter
-        function filterProducts(category) {
-            currentCategory = category;
+            function formatINR(amount) {
+                return '₹' + amount.toLocaleString('en-IN');
+            }
 
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                if (btn.dataset.filter === category) {
-                    btn.classList.add('bg-espresso', 'text-pearl', 'font-semibold');
-                    btn.classList.remove('bg-white', 'text-espresso', 'border', 'border-borderWarm');
+            window.filterProducts = function(category) {
+                currentCategory = category;
+
+                document.querySelectorAll('.filter-btn').forEach(function(btn) {
+                    if (btn.dataset.filter === category) {
+                        btn.classList.add('bg-espresso', 'text-pearl', 'font-semibold');
+                        btn.classList.remove('bg-white', 'text-espresso', 'border', 'border-borderWarm');
+                    } else {
+                        btn.classList.remove('bg-espresso', 'text-pearl', 'font-semibold');
+                        btn.classList.add('bg-white', 'text-espresso', 'border', 'border-borderWarm');
+                    }
+                });
+
+                applyAllFilters();
+            };
+
+            window.applyAllFilters = function() {
+                const modeFilter = document.getElementById('mode-filter').value;
+                const sortFilter = document.getElementById('sort-filter').value;
+                const searchEl = document.getElementById('search-input');
+                const mobileSearchEl = document.getElementById('mobile-search-input');
+                const searchTerm = ((searchEl && searchEl.value) || (mobileSearchEl && mobileSearchEl.value) || '').toLowerCase().trim();
+
+                let filtered = products.filter(function(p) {
+                    const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+                    const matchesSearch = !searchTerm || p.name.toLowerCase().includes(searchTerm) || p.stones.toLowerCase().includes(searchTerm) || p.finish.toLowerCase().includes(searchTerm);
+                    
+                    let matchesMode = true;
+                    if (modeFilter === 'rentable') matchesMode = p.isRentable === true;
+                    else if (modeFilter === 'under3k') matchesMode = p.price < 3000;
+
+                    return matchesCategory && matchesSearch && matchesMode;
+                });
+
+                if (sortFilter === 'low-high') {
+                    filtered.sort(function(a, b) { return a.price - b.price; });
+                } else if (sortFilter === 'high-low') {
+                    filtered.sort(function(a, b) { return b.price - a.price; });
+                }
+
+                renderProductCards(filtered);
+            };
+
+            function renderProductCards(list) {
+                const grid = document.getElementById('product-grid');
+                if (!grid) return;
+
+                if (list.length === 0) {
+                    grid.innerHTML =
+                        '<div class="col-span-full py-16 text-center bg-white rounded-3xl border border-borderWarm space-y-3">' +
+                            '<i class="fa-regular fa-gem text-3xl text-champagne"></i>' +
+                            '<h3 class="font-display text-2xl text-espresso">No matching jewellery found</h3>' +
+                            '<p class="text-xs text-taupe">Try resetting your filters to browse all our artificial & bridal rental designs.</p>' +
+                            '<button onclick="resetFilters()" class="mt-2 px-6 py-2.5 rounded-full bg-espresso text-pearl text-xs uppercase tracking-wider font-semibold">Reset Filters</button>' +
+                        '</div>';
+                    return;
+                }
+
+                grid.innerHTML = list.map(function(product) {
+                    const heartIcon = wishlist.has(product.id) ? 'fa-solid text-rose-500' : 'fa-regular';
+                    const rentBlock = product.isRentable
+                        ? '<div class="text-right bg-roseTint/80 px-2.5 py-1 rounded-xl border border-champagne/20">' +
+                              '<p class="text-[9px] uppercase tracking-wider text-champagne font-bold">3-Day Rent</p>' +
+                              '<p class="font-display text-sm font-bold text-espresso">' + formatINR(product.rentPrice) + '</p>' +
+                          '</div>'
+                        : '<span class="text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-cream text-taupe font-medium">Buy Only</span>';
+
+                    const waLink = getWhatsAppProductLink(product.name, product.isRentable ? 'Buy / Rent' : 'Buy');
+
+                    return (
+                        '<div class="luxury-card rounded-3xl overflow-hidden flex flex-col justify-between group">' +
+                            '<div>' +
+                                '<div class="relative aspect-[4/4.3] bg-cream overflow-hidden">' +
+                                    '<img src="' + product.image + '" onerror="this.src=\'https://placehold.co/600x660/F6F1EA/B58434?text=SHYRA+JEWELLERY\'" alt="' + product.name + '" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">' +
+                                    '<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-borderWarm text-[10px] font-semibold uppercase tracking-wider text-champagne shadow-sm">' + product.badge + '</span>' +
+                                    '<button onclick="toggleWishlist(' + product.id + ')" aria-label="Save to Wishlist" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm border border-borderWarm flex items-center justify-center text-espresso hover:text-champagne transition shadow-sm">' +
+                                        '<i class="' + heartIcon + ' fa-heart text-sm"></i>' +
+                                    '</button>' +
+                                    '<button onclick="openProductModal(' + product.id + ')" class="absolute bottom-3 left-3 right-3 py-2 rounded-full bg-white/95 backdrop-blur-md border border-borderWarm text-espresso text-[10px] font-semibold uppercase tracking-[0.16em] opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 hover:bg-espresso hover:text-white shadow-md">' +
+                                        'View Details & Rental Info' +
+                                    '</button>' +
+                                '</div>' +
+                                '<div class="p-5 pb-3">' +
+                                    '<p class="text-[11px] text-taupe font-medium">' + product.finish + '</p>' +
+                                    '<h3 class="font-display text-base sm:text-lg font-semibold text-espresso mt-1 group-hover:text-champagne transition leading-snug">' + product.name + '</h3>' +
+                                    '<p class="text-xs text-taupe/85 mt-1 line-clamp-1">' + product.stones + '</p>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="px-5 pb-5 pt-3 border-t border-borderWarm/70 space-y-3">' +
+                                '<div class="flex items-center justify-between">' +
+                                    '<div>' +
+                                        '<p class="text-[10px] uppercase tracking-wider text-taupe">Buy Price</p>' +
+                                        '<span class="font-display text-lg font-bold text-espresso">' + formatINR(product.price) + '</span>' +
+                                        '<span class="text-xs text-taupe line-through ml-1">' + formatINR(product.originalPrice) + '</span>' +
+                                    '</div>' +
+                                    rentBlock +
+                                '</div>' +
+                                '<div class="flex items-center gap-2 pt-1">' +
+                                    '<a href="' + waLink + '" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-full btn-luxe-wa text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider flex items-center justify-center space-x-1.5">' +
+                                        '<i class="fa-brands fa-whatsapp text-goldAccent text-sm"></i>' +
+                                        '<span>Enquire</span>' +
+                                    '</a>' +
+                                    '<button onclick="addToCart(' + product.id + ')" title="Add to Shortlist Bag" class="px-3.5 py-2.5 rounded-full bg-cream hover:bg-espresso text-espresso hover:text-white border border-borderWarm text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider transition">' +
+                                        '+ Bag' +
+                                    '</button>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'
+                    );
+                }).join('');
+            }
+
+            window.resetFilters = function() {
+                document.getElementById('mode-filter').value = 'all';
+                document.getElementById('sort-filter').value = 'featured';
+                if (document.getElementById('search-input')) document.getElementById('search-input').value = '';
+                if (document.getElementById('mobile-search-input')) document.getElementById('mobile-search-input').value = '';
+                filterProducts('all');
+            };
+
+            window.toggleWishlist = function(id) {
+                const product = products.find(function(p) { return p.id === id; });
+                if (!product) return;
+                if (wishlist.has(id)) {
+                    wishlist.delete(id);
+                    showToast('Removed "' + product.name + '" from your wishlist.');
                 } else {
-                    btn.classList.remove('bg-espresso', 'text-pearl', 'font-semibold');
-                    btn.classList.add('bg-white', 'text-espresso', 'border', 'border-borderWarm');
+                    wishlist.add(id);
+                    showToast('Saved "' + product.name + '" to your wishlist.');
+                }
+                const badge = document.getElementById('wishlist-badge');
+                if (badge) badge.classList.toggle('hidden', wishlist.size === 0);
+                applyAllFilters();
+            };
+
+            window.openProductModal = function(id) {
+                const product = products.find(function(p) { return p.id === id; });
+                if (!product) return;
+
+                const modal = document.getElementById('product-modal');
+                const content = document.getElementById('modal-content');
+                const waLink = getWhatsAppProductLink(product.name, product.isRentable ? 'Buy or Rent' : 'Buy');
+
+                const rentSection = product.isRentable
+                    ? '<div class="pl-4 border-l border-borderWarm">' +
+                          '<p class="text-[10px] uppercase tracking-wider text-champagne font-bold">3-Day Bridal Rental</p>' +
+                          '<span class="font-display text-xl font-bold text-espresso">' + formatINR(product.rentPrice) + '</span>' +
+                      '</div>'
+                    : '';
+
+                content.innerHTML =
+                    '<div class="bg-cream aspect-square md:aspect-auto">' +
+                        '<img src="' + product.image + '" onerror="this.src=\'https://placehold.co/600x600/F6F1EA/B58434?text=SHYRA\'" alt="' + product.name + '" class="w-full h-full object-cover">' +
+                    '</div>' +
+                    '<div class="p-6 sm:p-8 flex flex-col justify-between space-y-5">' +
+                        '<div class="space-y-3">' +
+                            '<span class="inline-block px-3 py-1 rounded-full bg-roseTint text-champagne text-[10px] font-bold uppercase tracking-widest">' + product.badge + '</span>' +
+                            '<h3 class="font-display text-2xl font-semibold text-espresso">' + product.name + '</h3>' +
+                            '<div class="flex flex-wrap items-center gap-4 pt-1">' +
+                                '<div>' +
+                                    '<p class="text-[10px] uppercase tracking-wider text-taupe">Purchase Price</p>' +
+                                    '<span class="font-display text-xl font-bold text-espresso">' + formatINR(product.price) + '</span>' +
+                                    '<span class="text-xs text-taupe line-through ml-1">' + formatINR(product.originalPrice) + '</span>' +
+                                '</div>' +
+                                rentSection +
+                            '</div>' +
+                            '<p class="text-xs sm:text-sm text-taupe leading-relaxed pt-1">' + product.description + '</p>' +
+                            '<div class="p-4 rounded-2xl bg-pearl border border-borderWarm text-xs text-espresso space-y-1.5">' +
+                                '<div class="flex justify-between gap-2"><span class="text-taupe">Plating & Finish:</span><span class="font-semibold text-right">' + product.finish + '</span></div>' +
+                                '<div class="flex justify-between gap-2"><span class="text-taupe">Stone Craft:</span><span class="font-semibold text-right">' + product.stones + '</span></div>' +
+                                '<div class="flex justify-between gap-2"><span class="text-taupe">Store Trial:</span><span class="font-semibold text-champagne text-right">Fortune Mall, Sitabuldi</span></div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="space-y-2.5">' +
+                            '<a href="' + waLink + '" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-full btn-luxe-wa font-semibold text-[11px] tracking-[0.18em] uppercase flex items-center justify-center space-x-2">' +
+                                '<i class="fa-brands fa-whatsapp text-goldAccent text-base"></i>' +
+                                '<span>Enquire on WhatsApp</span>' +
+                            '</a>' +
+                            '<button onclick="addToCart(' + product.id + '); closeProductModal();" class="w-full py-3.5 rounded-full bg-white border border-borderWarm text-espresso hover:border-champagne font-semibold text-[11px] tracking-[0.18em] uppercase transition">' +
+                                'Add to Selection Bag' +
+                            '</button>' +
+                        '</div>' +
+                    '</div>';
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            };
+
+            window.closeProductModal = function() {
+                const modal = document.getElementById('product-modal');
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            };
+
+            window.addToCart = function(id) {
+                const product = products.find(function(p) { return p.id === id; });
+                if (!product) return;
+                const existing = cart.find(function(item) { return item.id === id; });
+                if (existing) {
+                    existing.qty += 1;
+                } else {
+                    cart.push(Object.assign({}, product, { qty: 1 }));
+                }
+                updateCartUI();
+                showToast('Added "' + product.name + '" to your selection bag.');
+            };
+
+            window.updateQuantity = function(id, delta) {
+                const item = cart.find(function(i) { return i.id === id; });
+                if (!item) return;
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    cart = cart.filter(function(i) { return i.id !== id; });
+                }
+                updateCartUI();
+            };
+
+            function updateCartUI() {
+                const countBadge = document.getElementById('cart-count');
+                const container = document.getElementById('cart-items-container');
+                const totalEl = document.getElementById('cart-total');
+
+                const totalItems = cart.reduce(function(sum, item) { return sum + item.qty; }, 0);
+                const totalPrice = cart.reduce(function(sum, item) { return sum + (item.price * item.qty); }, 0);
+
+                if (countBadge) countBadge.textContent = totalItems;
+                if (totalEl) totalEl.textContent = formatINR(totalPrice);
+                if (!container) return;
+
+                if (cart.length === 0) {
+                    container.innerHTML =
+                        '<div class="h-full flex flex-col items-center justify-center text-center py-12 space-y-3">' +
+                            '<div class="w-14 h-14 rounded-full bg-cream flex items-center justify-center text-champagne">' +
+                                '<i class="fa-solid fa-bag-shopping text-xl"></i>' +
+                            '</div>' +
+                            '<p class="font-display text-xl font-medium text-espresso">Your Bag is Empty</p>' +
+                            '<p class="text-xs text-taupe max-w-xs">Add artificial or bridal rental pieces to send your complete shortlist on WhatsApp.</p>' +
+                        '</div>';
+                    return;
+                }
+
+                container.innerHTML = cart.map(function(item) {
+                    const rentText = item.isRentable ? ' • Rent: ' + formatINR(item.rentPrice) : '';
+                    const waLink = getWhatsAppProductLink(item.name);
+                    return (
+                        '<div class="flex items-center space-x-3.5 p-3.5 rounded-2xl bg-pearl border border-borderWarm">' +
+                            '<img src="' + item.image + '" alt="' + item.name + '" class="w-16 h-20 object-cover rounded-xl border border-borderWarm shrink-0">' +
+                            '<div class="flex-1 min-w-0">' +
+                                '<h4 class="font-display text-sm font-semibold text-espresso truncate">' + item.name + '</h4>' +
+                                '<p class="text-[11px] text-taupe">Buy: ' + formatINR(item.price) + rentText + '</p>' +
+                                '<a href="' + waLink + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1 text-[11px] text-champagne font-semibold mt-1 hover:underline">' +
+                                    '<i class="fa-brands fa-whatsapp"></i>' +
+                                    '<span>Enquire this piece</span>' +
+                                '</a>' +
+                            '</div>' +
+                            '<div class="flex items-center space-x-1.5 shrink-0">' +
+                                '<button onclick="updateQuantity(' + item.id + ', -1)" class="w-7 h-7 rounded-full bg-white border border-borderWarm text-xs text-espresso hover:border-champagne">-</button>' +
+                                '<span class="text-xs font-semibold w-4 text-center">' + item.qty + '</span>' +
+                                '<button onclick="updateQuantity(' + item.id + ', 1)" class="w-7 h-7 rounded-full bg-white border border-borderWarm text-xs text-espresso hover:border-champagne">+</button>' +
+                            '</div>' +
+                        '</div>'
+                    );
+                }).join('');
+            }
+
+            window.sendCartToWhatsApp = function() {
+                if (cart.length === 0) {
+                    showToast("Please add at least one product to your bag first.");
+                    return;
+                }
+                const itemLines = cart.map(function(item, idx) {
+                    return (idx + 1) + ". *" + item.name + "* (Qty: " + item.qty + ")";
+                }).join("\n");
+                const message = "Hello Shyra Jewellery! I would like to enquire (Buy / Rent) about these shortlisted products:\n\n" + itemLines + "\n\nPlease share availability and details.";
+                window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+            };
+
+            window.checkoutOrder = function() {
+                if (cart.length === 0) {
+                    showToast("Please add at least one piece to your selection bag.");
+                    return;
+                }
+                cart = [];
+                updateCartUI();
+                document.getElementById('cart-drawer').classList.add('hidden');
+                showToast("Thank you! Your order request has been reserved with Shyra Jewellery Nagpur.");
+            };
+
+            let toastTimer;
+            window.showToast = function(message) {
+                const toast = document.getElementById('toast-notification');
+                const msgEl = document.getElementById('toast-message');
+                if (!toast || !msgEl) return;
+                msgEl.textContent = message;
+                toast.classList.remove('translate-y-24', 'opacity-0');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function() {
+                    toast.classList.add('translate-y-24', 'opacity-0');
+                }, 3400);
+            };
+
+            function createGlints() {
+                const container = document.getElementById('glint-container');
+                if (!container) return;
+                for (let i = 0; i < 18; i++) {
+                    const glint = document.createElement('div');
+                    glint.className = 'glint';
+                    glint.style.left = (Math.random() * 94 + 3) + '%';
+                    glint.style.top = (Math.random() * 94 + 3) + '%';
+                    glint.style.animationDelay = (Math.random() * 4) + 's';
+                    container.appendChild(glint);
+                }
+            }
+
+            function initScrollReveal() {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) entry.target.classList.add('active');
+                    });
+                }, { threshold: 0.08 });
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    observer.observe(el);
+                });
+            }
+
+            window.addEventListener('DOMContentLoaded', function() {
+                renderProductCards(products);
+                updateCartUI();
+                createGlints();
+                initScrollReveal();
+
+                const searchInput = document.getElementById('search-input');
+                const mobileSearchInput = document.getElementById('mobile-search-input');
+                if (searchInput) searchInput.addEventListener('input', applyAllFilters);
+                if (mobileSearchInput) mobileSearchInput.addEventListener('input', applyAllFilters);
+
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileBtn && mobileMenu) {
+                    mobileBtn.addEventListener('click', function() {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+                document.querySelectorAll('.mobile-link').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (mobileMenu) mobileMenu.classList.add('hidden');
+                    });
+                });
+
+                const cartDrawer = document.getElementById('cart-drawer');
+                const openCartBtn = document.getElementById('open-cart-btn');
+                const closeCartBtn = document.getElementById('close-cart-btn');
+                const cartBackdrop = document.getElementById('cart-backdrop');
+                if (openCartBtn && cartDrawer) openCartBtn.addEventListener('click', function() { cartDrawer.classList.remove('hidden'); });
+                if (closeCartBtn && cartDrawer) closeCartBtn.addEventListener('click', function() { cartDrawer.classList.add('hidden'); });
+                if (cartBackdrop && cartDrawer) cartBackdrop.addEventListener('click', function() { cartDrawer.classList.add('hidden'); });
+
+                const apptForm = document.getElementById('appointment-form');
+                if (apptForm) {
+                    apptForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const name = document.getElementById('trial-name').value.trim();
+                        const date = document.getElementById('trial-date').value;
+                        const msg = "Hello Shyra Jewellery! My name is *" + name + "*. I would like to book a Bridal / Artificial Jewellery trial at your Fortune Mall, Sitabuldi store on *" + date + "*.";
+                        window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener,noreferrer");
+                        e.target.reset();
+                        showToast("Redirecting to WhatsApp to confirm your Fortune Mall trial slot!");
+                    });
                 }
             });
-
-            applyAllFilters();
+        } catch (err) {
+            console.error("Shyra Jewellery initialization error:", err);
         }
-
-        function applyAllFilters() {
-            const modeFilter = document.getElementById('mode-filter').value;
-            const sortFilter = document.getElementById('sort-filter').value;
-            const searchTerm = (document.getElementById('search-input')?.value || document.getElementById('mobile-search-input')?.value || '').toLowerCase().trim();
-
-            let filtered = products.filter(p => {
-                const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
-                const matchesSearch = !searchTerm || p.name.toLowerCase().includes(searchTerm) || p.stones.toLowerCase().includes(searchTerm) || p.finish.toLowerCase().includes(searchTerm);
-                
-                let matchesMode = true;
-                if (modeFilter === 'rentable') matchesMode = p.isRentable === true;
-                else if (modeFilter === 'under3k') matchesMode = p.price < 3000;
-
-                return matchesCategory && matchesSearch && matchesMode;
-            });
-
-            if (sortFilter === 'low-high') {
-                filtered.sort((a, b) => a.price - b.price);
-            } else if (sortFilter === 'high-low') {
-                filtered.sort((a, b) => b.price - a.price);
-            }
-
-            renderProductCards(filtered);
-        }
-
-        function renderProductCards(list) {
-            const grid = document.getElementById('product-grid');
-
-            if (list.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full py-16 text-center bg-white rounded-3xl border border-borderWarm space-y-3">
-                        <i class="fa-regular fa-gem text-3xl text-champagne"></i>
-                        <h3 class="font-serif text-2xl text-espresso">No matching jewellery found</h3>
-                        <p class="text-xs text-taupe">Try resetting your filters to browse all our artificial & bridal rental designs.</p>
-                        <button onclick="resetFilters()" class="mt-2 px-6 py-2.5 rounded-full bg-espresso text-pearl text-xs uppercase tracking-wider font-semibold">Reset Filters</button>
-                    </div>
-                `;
-                return;
-            }
-
-            grid.innerHTML = list.map(product => `
-                <div class="luxury-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-                    <div>
-                        <!-- Product Image Container -->
-                        <div class="relative aspect-[4/4.3] bg-cream overflow-hidden">
-                            <img 
-                                src="${product.image}" 
-                                onerror="this.src='https://placehold.co/600x660/F6F1EA/B8893A?text=SHYRA+JEWELLERY'"
-                                alt="${product.name}" 
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                            >
-                            
-                            <!-- Buy / Rent Badge -->
-                            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-borderWarm text-[10px] font-semibold uppercase tracking-wider text-champagne shadow-sm">
-                                ${product.badge}
-                            </span>
-
-                            <!-- Wishlist Heart -->
-                            <button onclick="toggleWishlist(${product.id})" aria-label="Save to Wishlist" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm border border-borderWarm flex items-center justify-center text-espresso hover:text-champagne transition shadow-sm">
-                                <i class="${wishlist.has(product.id) ? 'fa-solid text-rose-500' : 'fa-regular'} fa-heart text-sm"></i>
-                            </button>
-
-                            <!-- Quick Details Button -->
-                            <button onclick="openProductModal(${product.id})" class="absolute bottom-3 left-3 right-3 py-2 rounded-full bg-white/95 backdrop-blur-md border border-borderWarm text-espresso text-[10px] font-semibold uppercase tracking-[0.16em] opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300 hover:bg-espresso hover:text-white shadow-md">
-                                View Details & Rental Info
-                            </button>
-                        </div>
-
-                        <!-- Info -->
-                        <div class="p-5 pb-3">
-                            <p class="text-[11px] text-taupe font-medium">${product.finish}</p>
-                            <h3 class="font-serif text-xl font-semibold text-espresso mt-1 group-hover:text-champagne transition leading-snug">${product.name}</h3>
-                            <p class="text-xs text-taupe/85 mt-1 line-clamp-1">${product.stones}</p>
-                        </div>
-                    </div>
-
-                    <!-- Buy & Rent Pricing + Direct WhatsApp Button -->
-                    <div class="px-5 pb-5 pt-3 border-t border-borderWarm/70 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-[10px] uppercase tracking-wider text-taupe">Buy Price</p>
-                                <span class="font-serif text-xl font-bold text-espresso">${formatINR(product.price)}</span>
-                                <span class="text-xs text-taupe line-through ml-1">${formatINR(product.originalPrice)}</span>
-                            </div>
-                            ${product.isRentable ? `
-                                <div class="text-right bg-roseTint/80 px-2.5 py-1 rounded-xl border border-champagne/20">
-                                    <p class="text-[9px] uppercase tracking-wider text-champagne font-bold">3-Day Rent</p>
-                                    <p class="font-serif text-base font-bold text-espresso">${formatINR(product.rentPrice)}</p>
-                                </div>
-                            ` : `
-                                <span class="text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-cream text-taupe font-medium">Buy Only</span>
-                            `}
-                        </div>
-
-                        <!-- Direct WhatsApp Message with Product Name + Add to Bag -->
-                        <div class="flex items-center gap-2 pt-1">
-                            <a href="${getWhatsAppProductLink(product.name, product.isRentable ? 'Buy / Rent' : 'Buy')}" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-semibold uppercase tracking-wider transition flex items-center justify-center space-x-1.5 shadow-sm">
-                                <i class="fa-brands fa-whatsapp text-sm"></i>
-                                <span>WhatsApp</span>
-                            </a>
-                            <button onclick="addToCart(${product.id})" title="Add to Shortlist Bag" class="px-3.5 py-2.5 rounded-full bg-cream hover:bg-espresso text-espresso hover:text-white border border-borderWarm text-[11px] font-semibold uppercase tracking-wider transition">
-                                + Bag
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function resetFilters() {
-            document.getElementById('mode-filter').value = 'all';
-            document.getElementById('sort-filter').value = 'featured';
-            if (document.getElementById('search-input')) document.getElementById('search-input').value = '';
-            if (document.getElementById('mobile-search-input')) document.getElementById('mobile-search-input').value = '';
-            filterProducts('all');
-        }
-
-        function toggleWishlist(id) {
-            const product = products.find(p => p.id === id);
-            if (!product) return;
-            if (wishlist.has(id)) {
-                wishlist.delete(id);
-                showToast(`Removed "${product.name}" from your wishlist.`);
-            } else {
-                wishlist.add(id);
-                showToast(`Saved "${product.name}" to your wishlist.`);
-            }
-            document.getElementById('wishlist-badge').classList.toggle('hidden', wishlist.size === 0);
-            applyAllFilters();
-        }
-
-        function openProductModal(id) {
-            const product = products.find(p => p.id === id);
-            if (!product) return;
-
-            const modal = document.getElementById('product-modal');
-            const content = document.getElementById('modal-content');
-
-            content.innerHTML = `
-                <div class="bg-cream aspect-square md:aspect-auto">
-                    <img src="${product.image}" onerror="this.src='https://placehold.co/600x600/F6F1EA/B8893A?text=SHYRA'" alt="${product.name}" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6 sm:p-8 flex flex-col justify-between space-y-5">
-                    <div class="space-y-3">
-                        <span class="inline-block px-3 py-1 rounded-full bg-roseTint text-champagne text-[10px] font-bold uppercase tracking-widest">${product.badge}</span>
-                        <h3 class="font-serif text-3xl font-semibold text-espresso">${product.name}</h3>
-                        
-                        <div class="flex flex-wrap items-center gap-4 pt-1">
-                            <div>
-                                <p class="text-[10px] uppercase tracking-wider text-taupe">Purchase Price</p>
-                                <span class="font-serif text-2xl font-bold text-espresso">${formatINR(product.price)}</span>
-                                <span class="text-xs text-taupe line-through ml-1">${formatINR(product.originalPrice)}</span>
-                            </div>
-                            ${product.isRentable ? `
-                                <div class="pl-4 border-l border-borderWarm">
-                                    <p class="text-[10px] uppercase tracking-wider text-champagne font-bold">3-Day Bridal Rental</p>
-                                    <span class="font-serif text-2xl font-bold text-espresso">${formatINR(product.rentPrice)}</span>
-                                </div>
-                            ` : ''}
-                        </div>
-
-                        <p class="text-xs sm:text-sm text-taupe leading-relaxed pt-1">${product.description}</p>
-                        
-                        <div class="p-4 rounded-2xl bg-pearl border border-borderWarm text-xs text-espresso space-y-1.5">
-                            <div class="flex justify-between"><span class="text-taupe">Plating & Finish:</span><span class="font-semibold">${product.finish}</span></div>
-                            <div class="flex justify-between"><span class="text-taupe">Stone Craftsmanship:</span><span class="font-semibold">${product.stones}</span></div>
-                            <div class="flex justify-between"><span class="text-taupe">Store Trial:</span><span class="font-semibold text-champagne">Fortune Mall, Sitabuldi, Nagpur</span></div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-2.5">
-                        <a href="${getWhatsAppProductLink(product.name, product.isRentable ? 'Buy or Rent' : 'Buy')}" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-[0.18em] uppercase transition shadow-md flex items-center justify-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-base"></i>
-                            <span>Enquire on WhatsApp</span>
-                        </a>
-                        <button onclick="addToCart(${product.id}); closeProductModal();" class="w-full py-3.5 rounded-full bg-espresso text-pearl hover:bg-champagne font-semibold text-xs tracking-[0.18em] uppercase transition">
-                            Add to Selection Bag
-                        </button>
-                    </div>
-                </div>
-            `;
-
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closeProductModal() {
-            const modal = document.getElementById('product-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        }
-
-        // Shopping Bag Operations
-        function addToCart(id) {
-            const product = products.find(p => p.id === id);
-            if (!product) return;
-            const existing = cart.find(item => item.id === id);
-            if (existing) {
-                existing.qty += 1;
-            } else {
-                cart.push({ ...product, qty: 1 });
-            }
-            updateCartUI();
-            showToast(`Added "${product.name}" to your selection bag.`);
-        }
-
-        function updateQuantity(id, delta) {
-            const item = cart.find(i => i.id === id);
-            if (!item) return;
-            item.qty += delta;
-            if (item.qty <= 0) {
-                cart = cart.filter(i => i.id !== id);
-            }
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            const countBadge = document.getElementById('cart-count');
-            const container = document.getElementById('cart-items-container');
-            const totalEl = document.getElementById('cart-total');
-
-            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
-            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-
-            countBadge.textContent = totalItems;
-            totalEl.textContent = formatINR(totalPrice);
-
-            if (cart.length === 0) {
-                container.innerHTML = `
-                    <div class="h-full flex flex-col items-center justify-center text-center py-12 space-y-3">
-                        <div class="w-14 h-14 rounded-full bg-cream flex items-center justify-center text-champagne">
-                            <i class="fa-solid fa-bag-shopping text-xl"></i>
-                        </div>
-                        <p class="font-serif text-2xl font-medium text-espresso">Your Bag is Empty</p>
-                        <p class="text-xs text-taupe max-w-xs">Add artificial or bridal rental pieces to send your complete shortlist to us on WhatsApp.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = cart.map(item => `
-                <div class="flex items-center space-x-4 p-3.5 rounded-2xl bg-pearl border border-borderWarm">
-                    <img src="${item.image}" alt="${item.name}" class="w-16 h-20 object-cover rounded-xl border border-borderWarm">
-                    <div class="flex-1 min-w-0">
-                        <h4 class="font-serif text-base font-semibold text-espresso truncate">${item.name}</h4>
-                        <p class="text-[11px] text-taupe">Buy: ${formatINR(item.price)} ${item.isRentable ? `• Rent: ${formatINR(item.rentPrice)}` : ''}</p>
-                        <a href="${getWhatsAppProductLink(item.name)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1 text-[11px] text-emerald-700 font-semibold mt-1 hover:underline">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <span>Enquire this piece</span>
-                        </a>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <button onclick="updateQuantity(${item.id}, -1)" class="w-7 h-7 rounded-full bg-white border border-borderWarm text-xs text-espresso hover:border-champagne">-</button>
-                        <span class="text-xs font-semibold w-4 text-center">${item.qty}</span>
-                        <button onclick="updateQuantity(${item.id}, 1)" class="w-7 h-7 rounded-full bg-white border border-borderWarm text-xs text-espresso hover:border-champagne">+</button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function sendCartToWhatsApp() {
-            if (cart.length === 0) {
-                showToast("Please add at least one product to your bag first.");
-                return;
-            }
-            const itemLines = cart.map((item, idx) => `${idx + 1}. *${item.name}* (Qty: ${item.qty})`).join('\n');
-            const message = `Hello Shyra Jewellery! I would like to enquire (Buy / Rent) about these shortlisted products:\n\n${itemLines}\n\nPlease share availability and details.`;
-            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
-        }
-
-        function checkoutOrder() {
-            if (cart.length === 0) {
-                showToast("Please add at least one piece to your selection bag.");
-                return;
-            }
-            cart = [];
-            updateCartUI();
-            document.getElementById('cart-drawer').classList.add('hidden');
-            showToast("Thank you! Your order request has been reserved with Shyra Jewellery Nagpur.");
-        }
-
-        // Toast Helper
-        let toastTimer;
-        function showToast(message) {
-            const toast = document.getElementById('toast-notification');
-            document.getElementById('toast-message').textContent = message;
-            toast.classList.remove('translate-y-24', 'opacity-0');
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(() => {
-                toast.classList.add('translate-y-24', 'opacity-0');
-            }, 3400);
-        }
-
-        // Create Subtle Champagne Glints in Hero
-        function createGlints() {
-            const container = document.getElementById('glint-container');
-            if (!container) return;
-            for (let i = 0; i < 20; i++) {
-                const glint = document.createElement('div');
-                glint.className = 'glint';
-                glint.style.left = Math.random() * 100 + '%';
-                glint.style.top = Math.random() * 100 + '%';
-                glint.style.animationDelay = (Math.random() * 4) + 's';
-                container.appendChild(glint);
-            }
-        }
-
-        // Scroll Reveal Observer
-        function initScrollReveal() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('active');
-                });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        }
-
-        // Initialize Everything on Load
-        window.addEventListener('DOMContentLoaded', () => {
-            renderProductCards(products);
-            updateCartUI();
-            createGlints();
-            initScrollReveal();
-
-            // Live Search Listeners
-            document.getElementById('search-input')?.addEventListener('input', applyAllFilters);
-            document.getElementById('mobile-search-input')?.addEventListener('input', applyAllFilters);
-
-            // Mobile Menu Controls
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            document.querySelectorAll('.mobile-link').forEach(link => {
-                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-            });
-
-            // Cart Drawer Controls
-            const cartDrawer = document.getElementById('cart-drawer');
-            document.getElementById('open-cart-btn')?.addEventListener('click', () => cartDrawer.classList.remove('hidden'));
-            document.getElementById('close-cart-btn')?.addEventListener('click', () => cartDrawer.classList.add('hidden'));
-            document.getElementById('cart-backdrop')?.addEventListener('click', () => cartDrawer.classList.add('hidden'));
-
-            // Bridal Trial Booking Form -> Direct WhatsApp
-            document.getElementById('appointment-form')?.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const name = document.getElementById('trial-name').value.trim();
-                const date = document.getElementById('trial-date').value;
-                const msg = `Hello Shyra Jewellery! My name is *${name}*. I would like to book a Bridal / Artificial Jewellery trial at your Fortune Mall, Sitabuldi store on *${date}*.`;
-                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
-                e.target.reset();
-                showToast("Redirecting to WhatsApp to confirm your Fortune Mall trial slot!");
-            });
-        });
     </script>
 </body>
 </html>
